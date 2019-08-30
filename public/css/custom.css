@@ -1,0 +1,46 @@
+.btn-xs {
+    padding  : .30rem .5rem;
+    font-size  : .870rem;
+    line-height  : .6;
+    border-radius : .2rem;
+  }
+.log-container {
+    width: auto;
+    height: 400px;
+    overflow: auto;
+}
+.sidebar {
+    height: 100%; position: fixed; left: 0; width: 13%;
+}
+.alert{
+        display: none;
+      }
+.myAlert-top{
+          position: fixed;
+          top: 5%;
+          left:60%;
+          width: 35%;
+}
+th { font-size: 12px; font-family: tahoma;}
+td { font-size: 12px; font-family: tahoma;}
+td.details-control {
+    background: url('../images/open.png') no-repeat center center;
+    background-size: 23px 23px;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../images/close.png') no-repeat center center;
+    background-size: 23px 23px;
+}
+.bg-custom-color {
+    background-color: #2BBBAD;
+}
+.text-custom-color {
+    color: #FFFFF0;
+}
+.text-custom-active {
+    color: #000000;
+}
+.container-top{
+	padding-top: 5px;
+}

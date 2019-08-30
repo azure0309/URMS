@@ -1,0 +1,273 @@
+h4 {
+    margin-top: 1%;
+    margin-left: 25%;
+    margin-bottom: 3%;
+}
+
+.filters {
+    /*width: 95%;*/
+    /*margin-left: 1.5%;*/
+    /*margin-right: 1.5%;*/
+    /*height: 200px;*/
+    /*padding-left: 5%;*/
+    /*padding-top: 2%;*/
+    /*border-bottom: 1px solid gray;*/
+}
+
+.service_type {
+    width: 15%;
+    /*background-color: #0e0e0e;*/
+    height: 200px;
+    float: left;
+}
+
+.level_top {
+    width: 15%;
+    /*background-color: #0e0e0e;*/
+    height: 200px;
+    float: left;
+}
+
+.time_range {
+    height: 150px;
+    /*border: 1px solid #0e0e0e;*/
+    /*border-radius: 3px;*/
+    float: left;
+}
+
+.record_type {
+    /*border: 1px solid #0e0e0e;*/
+    /*border-radius: 3px;*/
+    height: 200px;
+    float: right;
+}
+
+.comp_rep {
+    width: 30%;
+    height: 200px;
+    /*border: 1px solid #0e0e0e;*/
+    /*border-radius: 3px;*/
+    float: left;
+}
+
+.report_result {
+    /*border-left: 1px solid gray;*/
+    /*border-right: 1px solid gray;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*margin-left: 2.5%;*/
+    width: 100%;
+    height: 800px;
+    /*border: 1px solid #0e0e0e;*/
+    /*border-radius: 3px;*/
+}
+
+.total_results {
+    width: 100%;
+    height: 40%;
+    float: left;
+}
+.num_result{
+    padding-left: 5%;
+    padding-right: 10%;
+
+}
+.charts {
+    width: 98%;
+    padding: 15px;
+    /*margin-top: 20px;*/
+    margin: 1%;
+    height: 70%;
+    border-top: 1px solid gray;
+    float: left;
+}
+.quality{
+    width: 100%;
+    height: 800px;
+}
+
+hr.style8 {
+    border-top: 1px solid #8c8b8b;
+    border-bottom: 1px solid #fff;
+    margin-top: 30%;
+}
+
+
+
+
+.rec_head {
+    height: 30px;
+    width: 45%;
+    background-color: #0e0e0e;
+}
+
+.data_table {
+    /*border: 1px solid #0e0e0e;*/
+    /*border-radius: 3px;*/
+    height: 500px;
+    width: 94%;
+    margin: 3%;
+}
+
+/*CHOOSE INBOUND - OUTBOUND RADIO_BUTTON*/
+
+.funkyradio div {
+    clear: both;
+    overflow: hidden;
+    margin-left: 10%;
+}
+
+.funkyradio label {
+    width: 150px;
+    border-radius: 3px;
+    border: 1px solid #D1D3D4;
+    font-weight: normal;
+}
+
+.funkyradio input[type="radio"]:empty,
+.funkyradio input[type="checkbox"]:empty {
+    display: none;
+}
+
+.funkyradio input[type="radio"]:empty ~ label,
+.funkyradio input[type="checkbox"]:empty ~ label {
+    position: relative;
+    line-height: 2.5em;
+    text-indent: 3.25em;
+    /*margin-top: 1em;*/
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.funkyradio input[type="radio"]:empty ~ label:before,
+.funkyradio input[type="checkbox"]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 2.5em;
+    background: #D1D3D4;
+    border-radius: 3px 0 0 3px;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label,
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label {
+    color: #888;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label:before,
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
+    content: '\2714';
+    text-indent: .9em;
+    color: #C2C2C2;
+}
+
+.funkyradio input[type="radio"]:checked ~ label,
+.funkyradio input[type="checkbox"]:checked ~ label {
+    color: #777;
+}
+
+.funkyradio input[type="radio"]:checked ~ label:before,
+.funkyradio input[type="checkbox"]:checked ~ label:before {
+    content: '\2714';
+    text-indent: .9em;
+    color: #333;
+    background-color: #ccc;
+}
+
+.funkyradio input[type="radio"]:focus ~ label:before,
+.funkyradio input[type="checkbox"]:focus ~ label:before {
+    box-shadow: 0 0 0 3px #999;
+}
+
+.funkyradio-default input[type="radio"]:checked ~ label:before,
+.funkyradio-default input[type="checkbox"]:checked ~ label:before {
+    color: #333;
+    background-color: #ccc;
+}
+
+.funkyradio-primary input[type="radio"]:checked ~ label:before,
+.funkyradio-primary input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #337ab7;
+}
+
+.funkyradio-success input[type="radio"]:checked ~ label:before,
+.funkyradio-success input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.funkyradio-danger input[type="radio"]:checked ~ label:before,
+.funkyradio-danger input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.funkyradio-warning input[type="radio"]:checked ~ label:before,
+.funkyradio-warning input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+.funkyradio-info input[type="radio"]:checked ~ label:before,
+.funkyradio-info input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #5bc0de;
+}
+
+
+/*VERTICAL DYNAMIC TABS*/
+/* Style the tab */
+.tab {
+    margin-top: 20px;
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    width: 32%;
+    height: 80px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 5px 25px;
+    width: 100%;
+    height: 50%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #6ba2cc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    margin-top: 20px;
+    float: left;
+    padding: 5px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 80px;
+}
