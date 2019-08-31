@@ -79,7 +79,7 @@
       <workItem from="1566187050633" duration="4499000" />
       <workItem from="1567127514330" duration="857000" />
       <workItem from="1567129130576" duration="1887000" />
-      <workItem from="1567232381284" duration="1178000" />
+      <workItem from="1567232381284" duration="1864000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -144,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567127761394</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixed initend 2019-08-31">
+      <created>1567233600490</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1567233600490</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +178,8 @@
     <MESSAGE value="&quot;MOC voice chart legend 'none' to 'top'&quot;" />
     <MESSAGE value="&quot;Donut chart position fixed&quot;" />
     <MESSAGE value="fixed initend 2019-08-30" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed initend 2019-08-30" />
+    <MESSAGE value="fixed initend 2019-08-31" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed initend 2019-08-31" />
   </component>
   <component name="masterDetails">
     <states>
