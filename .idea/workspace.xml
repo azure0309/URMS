@@ -79,7 +79,7 @@
       <workItem from="1566187050633" duration="4499000" />
       <workItem from="1567127514330" duration="857000" />
       <workItem from="1567129130576" duration="1887000" />
-      <workItem from="1567232381284" duration="1962000" />
+      <workItem from="1567232381284" duration="2626000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -158,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567269020978</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fixed initend 2019-09-01">
+      <created>1567269115958</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1567269115958</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
