@@ -31,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PhpstormProjects/blog" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
@@ -80,6 +80,10 @@
       <workItem from="1567127514330" duration="857000" />
       <workItem from="1567129130576" duration="1887000" />
       <workItem from="1567232381284" duration="2626000" />
+      <workItem from="1568628073894" duration="509000" />
+      <workItem from="1568628832436" duration="142000" />
+      <workItem from="1568684126500" duration="777000" />
+      <workItem from="1569806825681" duration="153000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
