@@ -123,9 +123,9 @@ $(function() {
              audio.play();
         }
     var today = new Date();
-    var initst = today.getFullYear() +'/'+ (today.getMonth()-2) +'/'+(today.getDate());
-    var initend = today.getFullYear() +'/'+ (today.getMonth()+1)+'/'+(today.getDate()+2);
-    // var initend = 2019 +'/'+ 9 +'/'+today.getDate()+10;
+    var initst = today.getFullYear() + '/' + (today.getMonth() - 2) + '/' + today.getDate();
+    var initend = today.getFullYear() + '/' + (today.getMonth()+ 1) + '/' + (today.getDate()+1);
+    // var initend = 2019 +'/'+ 10 +'/'+today.getDate()+10;
 
     // var initst = today.getFullYear() +'/'+ (today.getMonth()-2) +'/'+(today.getDate());
     // var initend = today.getFullYear() +'/'+ (today.getMonth() +1)+'/'+(today.getDate()+1);
