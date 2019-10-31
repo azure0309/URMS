@@ -89,10 +89,10 @@ class quality_result extends Controller
         ->where('regdate', '=', date('Y-m-d', strtotime("-1 days")))
         ->sum('mo_sms_success');
 
-    if ($mo_sms_total_request == 0){
-      $mo_sms_total_request = 1;
+//    if ($mo_sms_total_request == 0){
+//      $mo_sms_total_request = 1;
       $mo_success_ratio = ($mo_sms_success * 100) / $mo_sms_total_request;
-    }
+//    }
 
     /******************************************************/
 
@@ -104,10 +104,10 @@ class quality_result extends Controller
         ->where('regdate', '=', date('Y-m-d', strtotime("-1 days")))
         ->sum('mt_sms_success');
 
-    if($mt_sms_total_request == 0){
-        $mt_sms_total_request = 1;
+//    if($mt_sms_total_request == 0){
+//        $mt_sms_total_request = 1;
         $mt_success_ratio = ($mt_sms_success * 100) / $mt_sms_total_request;
-    }
+//    }
 
     /*********************************************************/
 
@@ -118,10 +118,10 @@ class quality_result extends Controller
     $prn_success_number = DB::table('REPORT_INBOUND')
         ->where('regdate', '=', date('Y-m-d', strtotime("-1 days")))
         ->sum('prn_success_number');
-    if($prn_total_request == 0){
-        $prn_total_request = 1;
+//    if($prn_total_request == 0){
+//        $prn_total_request = 1;
         $prn_success_ratio = ($prn_success_number * 100) / $prn_total_request;
-    }
+//    }
 
     /********************************************************/
 

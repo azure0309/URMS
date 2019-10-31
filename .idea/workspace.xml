@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/quality_result.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/quality_result.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/reference_rp.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reference_rp.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +89,7 @@
       <workItem from="1569892252259" duration="453000" />
       <workItem from="1572335835595" duration="78000" />
       <workItem from="1572336027872" duration="2830000" />
-      <workItem from="1572398394147" duration="163000" />
+      <workItem from="1572398394147" duration="10543000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -187,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569892301528</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fixed initend 2019-11-01">
+      <created>1572398573484</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1572398573484</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +227,8 @@
     <MESSAGE value="fixed initend 2019-09-01" />
     <MESSAGE value="fixed initend 2019-09-30" />
     <MESSAGE value="fixed initend 2019-10-01" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed initend 2019-10-01" />
+    <MESSAGE value="fixed initend 2019-11-01" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed initend 2019-11-01" />
   </component>
   <component name="masterDetails">
     <states>
