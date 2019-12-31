@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/datatableController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/datatable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/datatable.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AlarmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlarmController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reference_rp.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reference_rp.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,12 +81,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3a222f2b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4b9fe9c4" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3a222f2b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@45f6a6ee" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4b9fe9c4" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4aea7b70" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -128,7 +126,14 @@
       <workItem from="1572335835595" duration="78000" />
       <workItem from="1572336027872" duration="2830000" />
       <workItem from="1572398394147" duration="18026000" />
-      <workItem from="1572538384423" duration="134000" />
+      <workItem from="1572538384423" duration="2022000" />
+      <workItem from="1572834700361" duration="5571000" />
+      <workItem from="1572856230474" duration="2949000" />
+      <workItem from="1572939517151" duration="3936000" />
+      <workItem from="1573003685523" duration="3938000" />
+      <workItem from="1576720487965" duration="63000" />
+      <workItem from="1576720788006" duration="1313000" />
+      <workItem from="1577754286765" duration="845000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -242,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572485368265</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixed initend 2019-11-01">
+      <created>1572538537166</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1572538537166</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

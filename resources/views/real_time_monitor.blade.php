@@ -130,12 +130,12 @@
             }
 
             var today = new Date();
-            var initst = today.getFullYear() + '/' + (today.getMonth() - 2) + '/' + today.getDate();
-            var initend = today.getFullYear() + '/' + (today.getMonth() +1) + '/' + (today.getDate()+1);
-            // var initend = 2019 +'/'+ 10 +'/'+today.getDate()+10;
+            // var initst = today.getFullYear() + '/' + (today.getMonth() - 2) + '/' + today.getDate();
+            // // var initend = today.getFullYear() + '/' + (today.getMonth() +1) + '/' + (today.getDate()+1);
+            var initend = 2019 +'/'+ 12 +'/'+today.getDate() +10;
             // document.write(initend)
-            // var initst = today.getFullYear() +'/'+ (today.getMonth()-2) +'/'+(today.getDate());
-            // var initend = today.getFullYear() +'/'+ (today.getMonth() +1)+'/'+(today.getDate()+1);
+            var initst = today.getFullYear() +'/'+ (today.getMonth()-2) +'/'+ 30;
+            // var initend = today.getFullYear() +'/'+ (today.getMonth() +1)+'/'+(today.getDate());
             // console.log(initst);
             // console.log(initend);
             fetch_data(initst, initend);
