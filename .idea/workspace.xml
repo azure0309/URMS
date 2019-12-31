@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/datatableController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/datatable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/datatable.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +41,11 @@
     </servers>
   </component>
   <component name="ProjectId" id="1OnoyjdhR7VablCB9m6JzDLE98k" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="oracle" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -53,18 +54,6 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Apache" start_url="http://127.0.0.1/URMS/public">
@@ -75,23 +64,15 @@
     </configuration>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4b9fe9c4" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4b9fe9c4" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4aea7b70" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -133,7 +114,9 @@
       <workItem from="1573003685523" duration="3938000" />
       <workItem from="1576720487965" duration="63000" />
       <workItem from="1576720788006" duration="1313000" />
-      <workItem from="1577754286765" duration="845000" />
+      <workItem from="1577754286765" duration="1802000" />
+      <workItem from="1577756377460" duration="6000" />
+      <workItem from="1577799919923" duration="5593000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -254,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572538537166</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fixed initend 2019-12-31">
+      <created>1577755171035</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1577755171035</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +276,14 @@
     <MESSAGE value="fixed initend 2019-09-30" />
     <MESSAGE value="fixed initend 2019-10-01" />
     <MESSAGE value="fixed initend 2019-11-01" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed initend 2019-11-01" />
+    <MESSAGE value="fixed initend 2019-12-31" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed initend 2019-12-31" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1577799927236">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1600.1160@0.0.1920.1040" timestamp="1577799927236" />
   </component>
   <component name="masterDetails">
     <states>

@@ -130,16 +130,22 @@
             }
 
             var today = new Date();
-            // var initst = today.getFullYear() + '/' + (today.getMonth() - 2) + '/' + today.getDate();
-            // // var initend = today.getFullYear() + '/' + (today.getMonth() +1) + '/' + (today.getDate()+1);
-            var initend = 2019 +'/'+ 12 +'/'+today.getDate() +10;
-            // document.write(initend)
-            var initst = today.getFullYear() +'/'+ (today.getMonth()-2) +'/'+ 30;
+            const months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+            const days = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
+            var translateDays = d => days[d];
+            var translateMonth = m => months[m];
+            var initst = today.getFullYear() -1  + '/' + translateMonth(today.getMonth()) + '/' + today.getDate();
+            var initend = today.getFullYear() + '/' + (today.getMonth() +1) + '/' + (today.getDate()+1);
+            // var initend = today.getFullYear() +'/'+ translateMonth(new Date().getMonth()) +'/' + today.getDate()+10;
+            // var test = today.getDate()+10;
+            // document.write(test);
+            // var initst = today.getFullYear() +'/'+ translateMonth(new Date().getMonth()) +'/'+ 30;
             // var initend = today.getFullYear() +'/'+ (today.getMonth() +1)+'/'+(today.getDate());
             // console.log(initst);
             // console.log(initend);
             fetch_data(initst, initend);
 
+            // document.write(translateMonth(new Date().getMonth()));
             function fetch_data(start_date, end_date) {
                 alarm_table = $('#alarm-table').DataTable({
                     "processing": true,
