@@ -116,7 +116,8 @@
       <workItem from="1576720788006" duration="1313000" />
       <workItem from="1577754286765" duration="1802000" />
       <workItem from="1577756377460" duration="6000" />
-      <workItem from="1577799919923" duration="5593000" />
+      <workItem from="1577799919923" duration="6949000" />
+      <workItem from="1580433228705" duration="451000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -244,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577755171035</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fixed initend 2020-01-01">
+      <created>1577808921920</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1577808921920</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,13 +285,22 @@
     <MESSAGE value="fixed initend 2019-10-01" />
     <MESSAGE value="fixed initend 2019-11-01" />
     <MESSAGE value="fixed initend 2019-12-31" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed initend 2019-12-31" />
+    <MESSAGE value="fixed initend 2020-01-01" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed initend 2020-01-01" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1577799927236">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1577808916854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1600.1160@0.0.1920.1040" timestamp="1577799927236" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1600.1160@0.0.1920.1040" timestamp="1577808916854" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1577808929904">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1600.1160@0.0.1920.1040" timestamp="1577808929904" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580433278106">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1600.1160@0.0.1920.1040" timestamp="1580433278106" />
   </component>
   <component name="masterDetails">
     <states>
