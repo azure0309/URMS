@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +120,8 @@
       <workItem from="1580529279065" duration="781000" />
       <workItem from="1580874655011" duration="77000" />
       <workItem from="1582906976679" duration="526000" />
-      <workItem from="1583030513664" duration="17000" />
+      <workItem from="1583030513664" duration="209000" />
+      <workItem from="1583037206418" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -277,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582907278671</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fixed initend 2020-01-01">
+      <created>1583030561245</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1583030561245</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,20 +321,24 @@
     <option name="LAST_COMMIT_MESSAGE" value="fixed initend 2020-01-01" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="416" y="0" key="CommitChangelistDialog2" timestamp="1582907275067">
+    <state x="363" y="101" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583030703227">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="416" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582907275067" />
+    <state x="363" y="101" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1583030703227" />
+    <state x="416" y="0" key="CommitChangelistDialog2" timestamp="1583030556445">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="416" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583030556445" />
     <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1600.1160@0.0.1920.1040" timestamp="1580529457794" />
-    <state x="393" y="178" key="Vcs.Push.Dialog.v2" timestamp="1582907419378">
+    <state x="393" y="178" key="Vcs.Push.Dialog.v2" timestamp="1583030574148">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="393" y="178" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1582907419378" />
+    <state x="393" y="178" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1583030574148" />
     <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1600.1160@0.0.1920.1040" timestamp="1580529468210" />
-    <state x="467" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1583030513725">
+    <state x="467" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1583037215484">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="467" y="241" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583030513725" />
+    <state x="467" y="241" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583037215484" />
     <state x="492" y="285" key="com.intellij.ide.util.TipDialog/0.0.1440.860/-1920.-171.1920.1040@0.0.1440.860" timestamp="1580874734871" />
     <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1600.1160@0.0.1920.1040" timestamp="1580529370173" />
   </component>
