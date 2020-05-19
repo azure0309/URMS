@@ -137,6 +137,7 @@ class ReferenceController extends Controller
             $data->status_date           = date("Y/m/d");
             $data->tap_seq               = null;
             $data->tap_seq_in            = null;
+            $data->iso_code              = null;
             $data->save();
           }
       }
