@@ -137,7 +137,7 @@ class ReferenceController extends Controller
             $data->status_date           = date("Y/m/d");
             $data->tap_seq               = null;
             $data->tap_seq_in            = null;
-            $data->iso_code              = null;
+//            $data->iso_code              = null;
             $data->save();
           }
       }
@@ -177,7 +177,8 @@ class ReferenceController extends Controller
               'status_date' => $data->status_date,
               'tap_seq' => $data->tap_seq,
               'tap_seq_in' => $data->tap_seq_in,
-              'node_gt' => $data->node_gt
+              'node_gt' => $data->node_gt,
+//              'iso_code' => $data->isocode
         );
         echo json_encode($output);
       }
@@ -222,8 +223,8 @@ class ReferenceController extends Controller
       public function reference_history($request)
       {
         $tadig = $request->input('tadig');
-        DB::statement("INSERT INTO REFERENCE_RP_HISTORY SELECT * FROM REFERENCE_RP_CURRENT where TADIG = '$tadig'");
-        reference_rp_history::where('tadig', $tadig)->update(['status' => 'Inactive']);
+//        DB::statement("INSERT INTO REFERENCE_RP_HISTORY SELECT * FROM REFERENCE_RP_CURRENT where TADIG = '$tadig'");
+//        reference_rp_history::where('tadig', $tadig)->update(['status' => 'Inactive']);
         Reference::where('tadig', $tadig)
             ->update(['continent' => $request->input('continent'),
                       'country' => $request->input('country'),
@@ -359,8 +360,8 @@ class ReferenceController extends Controller
       public function reference_delete(Request $request)
       {
         $tadig = $request->input('tadig');
-        DB::statement("INSERT INTO REFERENCE_RP_HISTORY SELECT * FROM REFERENCE_RP_CURRENT where TADIG = '$tadig'");
-        reference_rp_history::where('tadig', $tadig)->update(['status' => 'Inactive']);
+//        DB::statement("INSERT INTO REFERENCE_RP_HISTORY SELECT * FROM REFERENCE_RP_CURRENT where TADIG = '$tadig'");
+//        reference_rp_history::where('tadig', $tadig)->update(['status' => 'Inactive']);
         Reference::where('tadig', $tadig)->delete();
       }
       public function threshold_show(Request $request)

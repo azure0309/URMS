@@ -494,6 +494,7 @@
                 var memo_date = $('#edit-memo-date').val();
                 var node_gt = $('#edit-ref-node-gt').val();
                 var status = $('#edit-ref-status').val();
+                var iso_code = $('').val();
                 $.ajax({
                     type: "POST",
                     url: "{{ url('/reference-rp/update')}}",
@@ -527,6 +528,7 @@
                         memo: memo,
                         memo_date: memo_date,
                         node_gt: node_gt
+                        // iso_code: iso_code
                     },
                     success: function (data) {
                         alert("Data saved");
