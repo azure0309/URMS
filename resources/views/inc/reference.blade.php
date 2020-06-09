@@ -15,14 +15,12 @@
               <select class="form-control form-control-sm" id="add-ref-continent">
                 <option></option>
                 <option>AFRICA</option>
-                <option>SOUTH ASIA</option>
-                <option>EUROPE: WESTERN</option>
-                <option>WEST ASIA</option>
-                <option>NORTH EAST ASIA</option>
-                <option>EUROPE: EASTERN</option>
-                <option>NORTH AMERICA</option>
+                <option>ANTARCTICA</option>
+                <option>ASIA</option>
                 <option>AUSTRALIA</option>
-                <option>SOUTH AMERICA</option>
+                <option>EUROPE</option>
+                <option>NORTH_AMERICA</option>
+                <option>SOUTH_AMERICA</option>
               </select>
             </div>
           </div>
