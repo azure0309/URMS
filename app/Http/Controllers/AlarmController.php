@@ -38,7 +38,7 @@ class AlarmController extends Controller
                 $sql = "name  like ?";
                 $query->whereRaw($sql, ["%{$keyword}%"]);
             })->addColumn('action', function ($alarm) {
-                return '<a href="#" id="' . $alarm->id . '" class="btn btn-danger btn-xs edit" data-toggle="modal" data-target="#alarm-action">
+                return '<a href="#" id="' . $alarm->id . '" class="btn btn-info btn-xs edit" data-toggle="modal" data-target="#alarm-action">
                             <i class="glyphicon glyphicon-edit"></i>Action</a>';
             })->setRowClass(function ($alarm) {
                 if ($alarm->status == 'Clear') {
