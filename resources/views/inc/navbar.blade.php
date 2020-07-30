@@ -107,6 +107,10 @@
             <a class="dropdown-item" href="{{ url('reference-rp-history')}}">reference_rp_history</a>
           </div>
         </li>
+        <li class="nav-item ">
+            <a class="nav-link text-custom-color"
+               href="{{url('report')}}">SIM Invoice</a>
+        </li>
    </ul>
   </div>
 </nav>
