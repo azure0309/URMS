@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +134,8 @@
       <workItem from="1591695879812" duration="376000" />
       <workItem from="1591780393174" duration="491000" />
       <workItem from="1592531007172" duration="145000" />
-      <workItem from="1596120330693" duration="1192000" />
+      <workItem from="1596120330693" duration="2034000" />
+      <workItem from="1596162207190" duration="120000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -332,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591780753291</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="added SIM voice button main navigation bar menu on navbar.blade.php commit#4.0">
+      <created>1596121632416</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1596121632416</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +378,8 @@
     <MESSAGE value="fixed edit, delete functions ReferenceController.php commit#1" />
     <MESSAGE value="modified Continents in reference.blade.php commit#2" />
     <MESSAGE value="changed Action button color on AlarmController.php commit#3" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed Action button color on AlarmController.php commit#3" />
+    <MESSAGE value="added SIM voice button main navigation bar menu on navbar.blade.php commit#4.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="added SIM voice button main navigation bar menu on navbar.blade.php commit#4.0" />
   </component>
   <component name="WindowStateProjectService">
     <state x="510" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1591607006141">
@@ -381,14 +390,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="738" y="158" key="CommitChangelistDialog2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1596121616183" />
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1591780768765">
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1596121632771">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1591780768765" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1596120394460">
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1596121632771" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1596162212608">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1596120394460" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1596162212608" />
   </component>
   <component name="masterDetails">
     <states>
