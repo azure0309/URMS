@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AlarmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlarmController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +136,9 @@
       <workItem from="1592531007172" duration="145000" />
       <workItem from="1596120330693" duration="2034000" />
       <workItem from="1596162207190" duration="1432000" />
-      <workItem from="1596598431733" duration="95000" />
+      <workItem from="1596598431733" duration="186000" />
+      <workItem from="1597394280465" duration="2395000" />
+      <workItem from="1597972484664" duration="238000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -348,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596162383027</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="date bug real_time_monitor.blade.php commit#3.1">
+      <created>1596598548860</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1596598548860</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,18 +404,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="510" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1591607006141" />
-    <state x="738" y="158" key="CommitChangelistDialog2" timestamp="1596162378263">
+    <state x="738" y="158" key="CommitChangelistDialog2" timestamp="1596598543986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="738" y="158" key="CommitChangelistDialog2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1596162378263" />
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1596162390306">
+    <state x="738" y="158" key="CommitChangelistDialog2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1596598543986" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1596598550455">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1596162390306" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1596598436468">
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1596598550455" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1597972506646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1596598436468" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1597972506646" />
   </component>
   <component name="masterDetails">
     <states>

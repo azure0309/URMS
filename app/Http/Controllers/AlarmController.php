@@ -42,7 +42,7 @@ class AlarmController extends Controller
                             <i class="glyphicon glyphicon-edit"></i>Action</a>';
             })->setRowClass(function ($alarm) {
                 if ($alarm->status == 'Clear') {
-                    return 'bg-light text-dark';
+                    return 'bg-success text-dark';
                 }
                 if ($alarm->severity == 'Critical') {
                     return 'bg-danger text-white';
@@ -52,6 +52,9 @@ class AlarmController extends Controller
                 }
                 if ($alarm->severity == 'Minor') {
                     return 'bg-info text-white';
+                }
+                if ($alarm->severity == 'Warning') {
+                    return 'bg-dark text-light';
                 }
             })
             ->toJson();
