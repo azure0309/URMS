@@ -138,7 +138,8 @@
       <workItem from="1596162207190" duration="1432000" />
       <workItem from="1596598431733" duration="186000" />
       <workItem from="1597394280465" duration="2395000" />
-      <workItem from="1597972484664" duration="238000" />
+      <workItem from="1597972484664" duration="1299000" />
+      <workItem from="1597999642382" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -357,7 +358,21 @@
       <option name="project" value="LOCAL" />
       <updated>1596598548860</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="added feature that change color to green the 'Cleared' alarms on real_time_monitor.blade.php commit#4.0">
+      <created>1597972778560</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1597972778560</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added feature that change color to light the 'Warning' alarms on real_time_monitor.blade.php commit#4.1">
+      <created>1597972955776</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1597972955776</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,25 +412,27 @@
     <MESSAGE value="changed Action button color on AlarmController.php commit#3" />
     <MESSAGE value="added SIM voice button main navigation bar menu on navbar.blade.php commit#4.0" />
     <MESSAGE value="date bug real_time_monitor.blade.php commit#3.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="date bug real_time_monitor.blade.php commit#3.1" />
+    <MESSAGE value="added feature that change color to green the 'Cleared' alarms on real_time_monitor.blade.php commit#4.0" />
+    <MESSAGE value="added feature that change color to light the 'Warning' alarms on real_time_monitor.blade.php commit#4.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="added feature that change color to light the 'Warning' alarms on real_time_monitor.blade.php commit#4.1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="510" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1591607006141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="510" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1591607006141" />
-    <state x="738" y="158" key="CommitChangelistDialog2" timestamp="1597972775982">
+    <state x="485" y="89" key="CommitChangelistDialog2" timestamp="1597972954055">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="738" y="158" key="CommitChangelistDialog2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1597972775982" />
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1597972787646">
+    <state x="485" y="89" key="CommitChangelistDialog2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1597972954055" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1597972959463">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1597972787646" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1597972506646">
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1597972959463" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1597999681468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1597972506646" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1597999681468" />
   </component>
   <component name="masterDetails">
     <states>
