@@ -54,7 +54,7 @@ class AlarmController extends Controller
                     return 'bg-info text-white';
                 }
                 if ($alarm->severity == 'Warning') {
-                    return 'bg-dark text-light';
+                    return 'bg-light text-light';
                 }
             })
             ->toJson();
