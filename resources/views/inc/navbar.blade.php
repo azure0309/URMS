@@ -109,7 +109,7 @@
         </li>
         <li class="nav-item ">
             <a class="nav-link text-custom-color"
-               href="{{url('report')}}">SIM Invoice</a>
+               href="{{url('invoice')}}">SIM Invoice</a>
         </li>
    </ul>
   </div>

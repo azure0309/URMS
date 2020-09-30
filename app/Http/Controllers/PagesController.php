@@ -50,6 +50,10 @@ class PagesController extends Controller
     {
         return view('report');
     }
+    public function invoice()
+    {
+        return view('invoice');
+    }
     public function reference_rp()
     {
         return view('reference_rp');

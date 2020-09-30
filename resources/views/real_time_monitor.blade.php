@@ -135,8 +135,8 @@
             var translateDays = d => days[d];
             var translateMonth = m => months[m];
             var initst = today.getFullYear() -1  + '/' + translateMonth(today.getMonth()) + '/' + today.getDate();
-            var initend = today.getFullYear() + '/' + (today.getMonth() +1) + '/' + (today.getDate()+1);
-            // var initend = today.getFullYear() +'/'+ translateMonth(new Date().getMonth()) +'/' + today.getDate()+10;
+            // var initend = today.getFullYear() + '/' + (today.getMonth() +1) + '/' + (today.getDate()+1);
+            var initend = today.getFullYear() +'/'+ translateMonth(new Date().getMonth()) +'/' + today.getDate()+10;
             var test = today.getDate()+10;
             // document.write(test);
             // var initst = today.getFullYear() +'/'+ translateMonth(new Date().getMonth()) +'/'+28;
