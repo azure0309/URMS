@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +145,9 @@
       <workItem from="1599027905362" duration="8441000" />
       <workItem from="1599547892159" duration="4077000" />
       <workItem from="1599553759543" duration="146000" />
-      <workItem from="1601428404944" duration="237000" />
+      <workItem from="1601428404944" duration="4830000" />
+      <workItem from="1601458403090" duration="5115000" />
+      <workItem from="1601531803778" duration="267000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -385,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597999724414</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="date bug real_time_monitor.blade.php commit#4.2">
+      <created>1601428797160</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1601428797160</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,29 +436,30 @@
     <MESSAGE value="date bug real_time_monitor.blade.php commit#3.1" />
     <MESSAGE value="added feature that change color to green the 'Cleared' alarms on real_time_monitor.blade.php commit#4.0" />
     <MESSAGE value="added feature that change color to light the 'Warning' alarms on real_time_monitor.blade.php commit#4.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="added feature that change color to light the 'Warning' alarms on real_time_monitor.blade.php commit#4.1" />
+    <MESSAGE value="date bug real_time_monitor.blade.php commit#4.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="date bug real_time_monitor.blade.php commit#4.2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="510" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599553529985">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="510" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1599553529985" />
-    <state x="485" y="89" key="CommitChangelistDialog2" timestamp="1597999720163">
+    <state x="485" y="89" key="CommitChangelistDialog2" timestamp="1601428779120">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="485" y="89" key="CommitChangelistDialog2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1597999720163" />
+    <state x="485" y="89" key="CommitChangelistDialog2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1601428779120" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1599550606335">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1599550606335" />
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1597999726513">
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1601428801602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1597999726513" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1601428405193">
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1601428801602" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1601531856341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1601428405193" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1601531856341" />
   </component>
   <component name="masterDetails">
     <states>
