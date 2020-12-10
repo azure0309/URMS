@@ -12,7 +12,7 @@ class ServiceUsageController extends Controller
 {
     function get_prod_name($number)
     {
-        $prod_name = SimInfoModel::where('PROD_NO', '=', $number)->pluck('PROD_NAME');
+        $prod_name = SimInfoModel::where('prod_no', '=', $number)->pluck('prod_name');
         if ($prod_name[0] == 'Roaming Partner Test') {
             $message = 'Roaming Partner Test';
         } elseif ($prod_name[0] == 'Roaming Service Test') {
@@ -26,7 +26,7 @@ class ServiceUsageController extends Controller
         $service_test_nums = array();
         $currentMonth = 202010;
 //        $currentMonth = intval(date('Ym', strtotime("-1 month")));
-        $select = SimUsageModel::where('BILL_MONTH', $currentMonth)->pluck('PROD_NO');
+        $select = SimUsageModel::where('bill_month', $currentMonth)->pluck('prod_no');
         foreach ($select as $number) {
             $get_prod_name = $this->get_prod_name($number);
             if ($get_prod_name == 'Roaming Service Test') {
@@ -40,17 +40,17 @@ class ServiceUsageController extends Controller
     {
         $currentMonth = 202010;
 //        $currentMonth = intval(date('Ym', strtotime("-1 month")));
-        $payment_per_num = SimUsageModel::where('PROD_NO', $number)
-            ->where('BILL_MONTH', $currentMonth)->pluck('TOT_BILL_AMT');
+        $payment_per_num = SimUsageModel::where('prod_no', $number)
+            ->where('bill_month', $currentMonth)->pluck('tot_bill_amt');
         return $payment_per_num;
     }
 
     function get_threshold_type($number)
     {
-        $operator = SimInfoModel::where('PROD_NO', $number)->pluck('NAME');
-        $country = SimInfoModel::where('PROD_NO', $number)->pluck('COUNTRY');
-        $threshold_type = SimThresholdModel::where('CUST_URAG', '=', $country)
-            ->where('CUST_NAME', '=', $operator)->pluck('Note');
+        $operator = SimInfoModel::where('prod_no', $number)->pluck('name');
+        $country = SimInfoModel::where('prod_no', $number)->pluck('country');
+        $threshold_type = SimThresholdModel::where('cust_urag', '=', $country)
+            ->where('cust_name', '=', $operator)->pluck('note');
         return $threshold_type;
     }
 
@@ -82,14 +82,14 @@ class ServiceUsageController extends Controller
         }
 //    total sim processing by single operator
         foreach ($total_sim as $sim) {
-            $operator = SimInfoModel::where('PROD_NO', $sim)->pluck('NAME');
-            $country = SimInfoModel::where('PROD_NO', $sim)->pluck('COUNTRY');
+            $operator = SimInfoModel::where('prod_no', $sim)->pluck('name');
+            $country = SimInfoModel::where('prod_no', $sim)->pluck('country');
             $payment_of_number = $this->get_payment_of_number($sim);
 
             array_push($total_sim_payment, ['country' => $country[0], 'operator' => $operator[0], 'prod_no' => $sim, 'payment' => $payment_of_number[0], 'bill_month' => $currentMonth]);
         }
         foreach ($per_sim as $sim) {
-            $operator = SimInfoModel::where('PROD_NO', $sim)->pluck('NAME');
+            $operator = SimInfoModel::where('prod_no', $sim)->pluck('name');
             $payment_of_number = $this->get_payment_of_number($sim);
             array_push($per_sim_payment, [$operator[0] => [$sim => $payment_of_number[0]]]);
         }

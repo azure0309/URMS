@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class SimUsageModel extends Model
 {
-    protected $table = 't_invoice_sim_usage';
+    protected $table = 'T_INVOICE_SIM_USAGE';
 }

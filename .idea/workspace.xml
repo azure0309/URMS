@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServiceUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServiceUsageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/SimUsageModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/SimUsageModel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +162,8 @@
       <workItem from="1607323315829" duration="8829000" />
       <workItem from="1607392777799" duration="6817000" />
       <workItem from="1607467904596" duration="10546000" />
-      <workItem from="1607558298833" duration="912000" />
+      <workItem from="1607558298833" duration="1553000" />
+      <workItem from="1607568936331" duration="3549000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -420,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607563113981</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="invoice automation module added &#10;database config updated for 10.21.0.101 server commit#5.3">
+      <created>1607563230043</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1607563230043</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +453,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed Division by zero on controller &quot;quality_result&quot;" />
     <MESSAGE value="fixed bug initst, initend in Real Time Monitor" />
     <MESSAGE value="rollback for 01 August update &quot;fixed bug initst, initend in Real Time Monitor&quot;" />
     <MESSAGE value="&quot;fixed bug initst, initend in Real Time Monitor&quot;" />
@@ -467,7 +477,8 @@
     <MESSAGE value="date bug real_time_monitor.blade.php commit#4.2" />
     <MESSAGE value="invoice automation module added commit#5.1" />
     <MESSAGE value="invoice automation module added commit#5.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="invoice automation module added commit#5.2" />
+    <MESSAGE value="invoice automation module added &#10;database config updated for 10.21.0.101 server commit#5.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="invoice automation module added &#10;database config updated for 10.21.0.101 server commit#5.3" />
   </component>
   <component name="masterDetails">
     <states>
