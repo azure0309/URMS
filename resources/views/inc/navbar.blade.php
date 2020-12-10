@@ -116,17 +116,12 @@
                 <a class="nav-link dropdown-toggle text-custom-color "
                    href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                    aria-expanded="false">
-                    SIM-Invoice
+                    Invoice Automation
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li style="position: relative;">
-                        <a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
-                    </li>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
-                        </ul>
-
-                </ul>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{url('invoice/partner')}}">Roaming Partner Test</a>
+                    <a class="dropdown-item" href="{{url('invoice/service')}}">Roaming Service Test</a>
+                </div>
             </li>
         </ul>
     </div>

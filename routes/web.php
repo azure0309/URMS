@@ -78,6 +78,8 @@ Route::post('/sub-analysis/hotline/data',['uses'=>'SubAnalysisController@hotline
 Route::get('/daily_report', 'Table_Inbound@daily_tb');
 Route::get('/report/traffic_report', 'resultGraph@count_cdr');
 Route::get('/report/quality_report', 'quality_result@result_sig');
-Route::get('/invoice', 'sim_invoice@getApi');
 Route::get('/report/datatable', 'datatableController@show');
+
+Route::get('/invoice/partner', 'PartnerUsageController@show');
+Route::get('/invoice/service', 'ServiceUsageController@show');
 

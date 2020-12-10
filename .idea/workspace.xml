@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/service_invoice.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/real_time_monitor.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,9 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings" doNotAsk="true">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -45,17 +45,25 @@
   <component name="ProjectId" id="1OnoyjdhR7VablCB9m6JzDLE98k" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="oracle" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PhpstormProjects/blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PhpstormProjects\URMS\resources\views" />
+      <recent name="C:\Users\User\PhpstormProjects\URMS\resources" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Apache" start_url="http://127.0.0.1/URMS/public">
@@ -65,18 +73,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -148,6 +145,26 @@
       <workItem from="1601428404944" duration="4830000" />
       <workItem from="1601458403090" duration="5115000" />
       <workItem from="1601531803778" duration="267000" />
+      <workItem from="1605969646250" duration="609000" />
+      <workItem from="1606135494650" duration="712000" />
+      <workItem from="1606183403049" duration="7111000" />
+      <workItem from="1606204103357" duration="7934000" />
+      <workItem from="1606233402775" duration="547000" />
+      <workItem from="1606295966626" duration="629000" />
+      <workItem from="1606405950591" duration="31000" />
+      <workItem from="1606406058653" duration="351000" />
+      <workItem from="1606412608007" duration="590000" />
+      <workItem from="1606445722704" duration="617000" />
+      <workItem from="1606561743731" duration="2158000" />
+      <workItem from="1606599599718" duration="6911000" />
+      <workItem from="1606704709900" duration="626000" />
+      <workItem from="1606791502907" duration="604000" />
+      <workItem from="1606864380295" duration="1327000" />
+      <workItem from="1607129997423" duration="1356000" />
+      <workItem from="1607323315829" duration="8829000" />
+      <workItem from="1607392777799" duration="6817000" />
+      <workItem from="1607467904596" duration="10546000" />
+      <workItem from="1607558298833" duration="725000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -398,20 +415,22 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed Division by zero on controller &quot;quality_result&quot;" />
@@ -438,28 +457,6 @@
     <MESSAGE value="added feature that change color to light the 'Warning' alarms on real_time_monitor.blade.php commit#4.1" />
     <MESSAGE value="date bug real_time_monitor.blade.php commit#4.2" />
     <option name="LAST_COMMIT_MESSAGE" value="date bug real_time_monitor.blade.php commit#4.2" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="510" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599553529985">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="510" y="144" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1599553529985" />
-    <state x="485" y="89" key="CommitChangelistDialog2" timestamp="1601428779120">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="485" y="89" key="CommitChangelistDialog2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1601428779120" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1599550606335">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="794" y="443" key="NewPhpFileDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1599550606335" />
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1601428801602">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1601428801602" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1601531856341">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/1920.171.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1601531856341" />
   </component>
   <component name="masterDetails">
     <states>
