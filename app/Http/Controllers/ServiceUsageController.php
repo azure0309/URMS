@@ -54,11 +54,11 @@ class ServiceUsageController extends Controller
         return $threshold_type;
     }
 
-    function sum_total_payments($total_numbers_list){
-        foreach($total_numbers_list as $number){
-            print_r($number);
-        }
-    }
+//    function sum_total_payments($total_numbers_list){
+//        foreach($total_numbers_list as $number){
+//            print_r($number);
+//        }
+//    }
 
 
 
@@ -103,7 +103,7 @@ class ServiceUsageController extends Controller
         $currentMonth = 202010;
 //        $currentMonth = intval(date('Ym', strtotime("-1 month")));
         $list = $this->list_of_partner_numbers_payments();
-        $this->sum_total_payments($list);
+//        $this->sum_total_payments($list);
         return view('service_invoice', ['total_sim_payment' => $list['total_sim_payment'], 'per_sim_payment'=>$list['per_sim_payment'], 'current_month' => $currentMonth]);
     }
 }
