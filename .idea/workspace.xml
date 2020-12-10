@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServiceUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServiceUsageController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +162,7 @@
       <workItem from="1607392777799" duration="6817000" />
       <workItem from="1607467904596" duration="10546000" />
       <workItem from="1607558298833" duration="1553000" />
-      <workItem from="1607568936331" duration="3693000" />
+      <workItem from="1607568936331" duration="4563000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -436,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607572564019</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="invoice automation module query builder error fixed commit#5.4">
+      <created>1607572645208</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1607572645208</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +466,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rollback for 01 August update &quot;fixed bug initst, initend in Real Time Monitor&quot;" />
     <MESSAGE value="&quot;fixed bug initst, initend in Real Time Monitor&quot;" />
     <MESSAGE value="&quot;MOC voice chart legend 'none' to 'top'&quot;" />
     <MESSAGE value="&quot;Donut chart position fixed&quot;" />
@@ -483,7 +490,8 @@
     <MESSAGE value="invoice automation module added commit#5.2" />
     <MESSAGE value="invoice automation module added &#10;database config updated for 10.21.0.101 server commit#5.3" />
     <MESSAGE value="invoice automation module query builder error fixed commit#5.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="invoice automation module query builder error fixed commit#5.3" />
+    <MESSAGE value="invoice automation module query builder error fixed commit#5.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="invoice automation module query builder error fixed commit#5.4" />
   </component>
   <component name="masterDetails">
     <states>

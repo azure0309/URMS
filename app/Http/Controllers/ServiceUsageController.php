@@ -24,8 +24,8 @@ class ServiceUsageController extends Controller
     function get_last_month_numbers()
     {
         $service_test_nums = array();
-        $currentMonth = 202010;
-//        $currentMonth = intval(date('Ym', strtotime("-1 month")));
+//        $currentMonth = 202010;
+        $currentMonth = intval(date('Ym', strtotime("-1 month")));
         $select = SimUsageModel::where('bill_month', $currentMonth)->pluck('prod_no');
         foreach ($select as $number) {
             $get_prod_name = $this->get_prod_name($number);
@@ -38,8 +38,8 @@ class ServiceUsageController extends Controller
 
     function get_payment_of_number($number)
     {
-        $currentMonth = 202010;
-//        $currentMonth = intval(date('Ym', strtotime("-1 month")));
+//        $currentMonth = 202010;
+        $currentMonth = intval(date('Ym', strtotime("-1 month")));
         $payment_per_num = SimUsageModel::where('prod_no', $number)
             ->where('bill_month', $currentMonth)->pluck('tot_bill_amt');
         return $payment_per_num;
@@ -65,8 +65,8 @@ class ServiceUsageController extends Controller
 
     function list_of_partner_numbers_payments()
     {
-        $currentMonth = 202010;
-//        $currentMonth = intval(date('Ym', strtotime("-1 month")));
+//        $currentMonth = 202010;
+        $currentMonth = intval(date('Ym', strtotime("-1 month")));
         $total_sim = array();
         $per_sim = array();
         $total_sim_payment = array();
@@ -100,8 +100,8 @@ class ServiceUsageController extends Controller
     function show()
     {
 
-        $currentMonth = 202010;
-//        $currentMonth = intval(date('Ym', strtotime("-1 month")));
+//        $currentMonth = 202010;
+        $currentMonth = intval(date('Ym', strtotime("-1 month")));
         $list = $this->list_of_partner_numbers_payments();
 //        $this->sum_total_payments($list);
         return view('service_invoice', ['total_sim_payment' => $list['total_sim_payment'], 'per_sim_payment'=>$list['per_sim_payment'], 'current_month' => $currentMonth]);

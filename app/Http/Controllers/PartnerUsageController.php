@@ -43,7 +43,7 @@ class PartnerUsageController extends Controller
         $currentMonth = 202010;
 //        $currentMonth = intval(date('Ym', strtotime("-1 month")));
         $payment_per_num = SimUsageModel::where('prod_no', $number)
-            ->where('BILL_MONTH', $currentMonth)->pluck('tot_bill_amt');
+            ->where('bill_month', $currentMonth)->pluck('tot_bill_amt');
         return $payment_per_num;
     }
 
@@ -60,8 +60,8 @@ class PartnerUsageController extends Controller
 
     function list_of_partner_numbers_payments()
     {
-        $currentMonth = 202010;
-//        $currentMonth = intval(date('Ym', strtotime("-1 month")));
+//        $currentMonth = 202010;
+        $currentMonth = intval(date('Ym', strtotime("-1 month")));
         $total_sim = array();
         $per_sim = array();
         $total_sim_payment = array();
@@ -93,9 +93,8 @@ class PartnerUsageController extends Controller
 
     function show()
     {
-//        print_r($this->get_last_month_numbers());
-        $currentMonth = 202010;
-//        $currentMonth = intval(date('Ym', strtotime("-1 month")));
+//        $currentMonth = 202010;
+        $currentMonth = intval(date('Ym', strtotime("-1 month")));
         $list = $this->list_of_partner_numbers_payments();
 //        return view('partner_invoice', ['current_month' => 456]);
         return view('partner_invoice', ['total_sim_payment'=>$list['total_sim_payment'], 'per_sim_payment'=>$list['per_sim_payment'], 'current_month'=>$currentMonth]);
