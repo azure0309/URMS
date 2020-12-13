@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServiceUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServiceUsageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +164,11 @@
       <workItem from="1607392777799" duration="6817000" />
       <workItem from="1607467904596" duration="10546000" />
       <workItem from="1607558298833" duration="1553000" />
-      <workItem from="1607568936331" duration="4563000" />
+      <workItem from="1607568936331" duration="23541000" />
+      <workItem from="1607647216523" duration="9640000" />
+      <workItem from="1607747744627" duration="7580000" />
+      <workItem from="1607831785284" duration="8798000" />
+      <workItem from="1607896835795" duration="6486000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -444,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607572645208</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="invoice automation module query builder error fixed commit#5.5">
+      <created>1607573734362</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1607573734362</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +479,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&quot;fixed bug initst, initend in Real Time Monitor&quot;" />
     <MESSAGE value="&quot;MOC voice chart legend 'none' to 'top'&quot;" />
     <MESSAGE value="&quot;Donut chart position fixed&quot;" />
     <MESSAGE value="fixed initend 2019-08-30" />
@@ -491,7 +503,8 @@
     <MESSAGE value="invoice automation module added &#10;database config updated for 10.21.0.101 server commit#5.3" />
     <MESSAGE value="invoice automation module query builder error fixed commit#5.3" />
     <MESSAGE value="invoice automation module query builder error fixed commit#5.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="invoice automation module query builder error fixed commit#5.4" />
+    <MESSAGE value="invoice automation module query builder error fixed commit#5.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="invoice automation module query builder error fixed commit#5.5" />
   </component>
   <component name="masterDetails">
     <states>

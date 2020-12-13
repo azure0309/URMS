@@ -83,3 +83,5 @@ Route::get('/report/datatable', 'datatableController@show');
 Route::get('/invoice/partner', 'PartnerUsageController@show');
 Route::get('/invoice/service', 'ServiceUsageController@show');
 
+Route::get('/invoice/test', 'test_controller@show');
+

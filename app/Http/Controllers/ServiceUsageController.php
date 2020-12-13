@@ -54,11 +54,7 @@ class ServiceUsageController extends Controller
         return $threshold_type;
     }
 
-//    function sum_total_payments($total_numbers_list){
-//        foreach($total_numbers_list as $number){
-//            print_r($number);
-//        }
-//    }
+
 
 
 
