@@ -243,6 +243,7 @@ class PartnerUsageController extends Controller
         $close_payment->total = $total;
         $close_payment->bill_month = $bill_month;
         $close_payment->currency = $currency;
+        $close_payment->status = 'FROM_INVOICE';
         $close_payment->save();
 
         $invoice_id = SendInvoiceModel::where('country', $country)
@@ -254,7 +255,7 @@ class PartnerUsageController extends Controller
             ->pluck('id');
 
         $delete_invoice = SendInvoiceModel::find($invoice_id[0]);
-        $delete_invoice->status = 'CLOSED';
+        $delete_invoice->status = 'TO_CLOSE';
         $delete_invoice->save();
     }
 
@@ -273,6 +274,7 @@ class PartnerUsageController extends Controller
 
         $send_invoice = SendInvoiceModel::find($invoice_id[0]);
         $send_invoice->total = $new_total;
+        $send_invoice->status = 'TO_CLOSE';
         $send_invoice->save();
 
         $close_payment->country = $country;
@@ -281,6 +283,7 @@ class PartnerUsageController extends Controller
         $close_payment->total = $discount;
         $close_payment->bill_month = $bill_month;
         $close_payment->currency = $currency;
+        $close_payment->status = 'FROM_INVOICE';
         $close_payment->save();
     }
 
