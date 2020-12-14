@@ -51,7 +51,7 @@
                             <tr>
                                 <th>Country</th>
                                 <th>Operator</th>
-                                <th>PROD NO</th>
+                                <th>MSISDN</th>
                                 <th>Payment</th>
                                 <th>Bill month</th>
                                 <th>Currency</th>
@@ -84,7 +84,7 @@
                             <tr>
                                 <th style="width: 15%">Country</th>
                                 <th style="width: 15%">Operator</th>
-                                <th>PROD NO</th>
+                                <th>MSISDN</th>
                                 <th>Payment</th>
                                 <th>Bill month</th>
                                 <th>Currency</th>
