@@ -34,7 +34,7 @@ class PartnerUsageController extends Controller
         } else {
             $currentMonth = intval(date('Ym', strtotime("-1 month")));
         }
-        $select = SimUsageModel::where('bill_month', 202003)->pluck('prod_no');
+        $select = SimUsageModel::where('bill_month', $currentMonth)->pluck('prod_no');
         foreach ($select as $item) {
             $get_prod_name = $this->get_prod_name($item);
             if (strtoupper($get_prod_name) == 'ROAMING PARTNER TEST') {
@@ -52,7 +52,7 @@ class PartnerUsageController extends Controller
             $currentMonth = intval(date('Ym', strtotime("-1 month")));
         }
         $payment_each_number = SimUsageModel::where('prod_no', $number)
-            ->where('bill_month', 202003)
+            ->where('bill_month', $currentMonth)
             ->pluck('tot_bill_amt');
 
         return floatval($payment_each_number[0]);
