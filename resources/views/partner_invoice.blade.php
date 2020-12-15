@@ -54,7 +54,6 @@
                                 <th>MSISDN</th>
                                 <th>Payment</th>
                                 <th>Bill month</th>
-                                <th>Currency</th>
                             </tr>
                             @foreach($close_payment as $payment)
                                 <tr>
@@ -63,7 +62,6 @@
                                     <td>{{$payment['msisdn']}}</td>
                                     <td>{{floatval($payment['total'])}}</td>
                                     <td>{{$payment['bill_month']}}</td>
-                                    <td>{{$payment['currency']}}</td>
                                 </tr>
                             @endforeach
                         </table>
@@ -80,16 +78,15 @@
                         <br>
                         <p>Bill month: {{$year_date}}</p>
                         <p>Bill status: Unpaid</p>
-                        <table class="table table-hover" border="1" width="100%">
+                        <table id="my_table" class="table table-hover" border="1" width="100%">
                             <tr>
-                                <th style="width: 15%">Country</th>
-                                <th style="width: 15%">Operator</th>
+                                <th>Country</th>
+                                <th>Operator</th>
                                 <th>MSISDN</th>
                                 <th>Payment</th>
                                 <th>Bill month</th>
-                                <th>Currency</th>
-                                <th style="width: 10%">Discount</th>
-                                <th>Action</th>
+                                <th style="width: 15%">Discount</th>
+                                <th colspan="2" style="width: 25%">Action</th>
                             </tr>
 
                             @foreach($send_invoice as $payment)
@@ -102,17 +99,17 @@
                                     <td><input type="hidden" name="msisdn" form="my_form"
                                                value="{{$payment['msisdn']}}">{{$payment['msisdn']}}</td>
                                     <td><input type="hidden" name="total" form="my_form"
-                                               value="{{$payment['total']}}">{{$payment['total']}}</td>
+                                               value="{{$payment['payment']}}">{{$payment['payment']}}</td>
                                     <td><input type="hidden" name="bill_month" form="my_form"
                                                value="{{$payment['bill_month']}}">{{$payment['bill_month']}}</td>
-                                    <td><input type="hidden" name="currency" form="my_form"
-                                               value="{{$payment['currency']}}">{{$payment['currency']}}</td>
                                     <td><input type="text" style="width: 92%" name="discount" form="my_form"
                                                placeholder="discount"></td>
                                     <td>
-                                        <input type="submit" value="Confirm" form="my_form"
-                                               class="btn btn-sm btn-success">
-                                        <button class="btn btn-sm btn-outline-danger">Invoice PDF</button>
+                                        <input type="submit" class="btn btn-sm btn-success" value="Confirm"
+                                               form="my_form">
+                                    </td>
+                                    <td rowspan="1">
+                                        <button onclick="myFunction()" class="btn btn-sm btn-outline-danger">Invoice PDF</button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -124,7 +121,6 @@
         </div>
     </div>
     <script>
-
         function printDiv(id) {
             var printContents = document.getElementById(id).innerHTML;
             var originalContents = document.body.innerHTML;
