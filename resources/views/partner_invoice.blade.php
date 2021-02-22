@@ -2,29 +2,30 @@
 @section('content')
     <div class="container">
         <div class="row mt-5">
-            <div class="col-md-8 offset-md-2">
+            <div class="col-md-12">
                 <div style="width: 120%" class="card">
                     <div style="height: 80%" class="card-header">
                         <div style="width: 50%; float: left">
                             <button onclick="lower()"
-                                    style="width: 50%; border-bottom-right-radius: 0; border-top-right-radius: 0;"
-                                    class="btn btn-lg btn-primary">Invoice List
+                                    style="width: 30%; float: left; border-bottom-right-radius: 0; border-top-right-radius: 0;"
+                                    class="btn btn-lg btn-primary">Нэхэмжлэх илгээх
                             </button>
                             <button id="close_payment"
                                     onclick="higher()"
-                                    style="width: 50%; float: right; border-bottom-left-radius: 0; border-top-left-radius: 0"
-                                    class="btn btn-lg btn-success">Close Payment List
+                                    style="width: 30%; float: left; border-bottom-left-radius: 0; border-top-left-radius: 0"
+                                    class="btn btn-lg btn-success">Төлбөр хаах
                             </button>
                         </div>
 
-                        <form method="get" action="/invoice/partner">
-                            <div class="form-group-sm" style="margin-left: 5%; width: 25%; float: left;">
-                                <input class="form-control" style="width: 60%; float: left" type="text" name="year_date"
-                                       value="{{$current_month}}">
-                                <input style="float: right" type="submit" class="btn btn-outline-info"
-                                       value="Search">
-                            </div>
-                        </form>
+                            <form method="get" action="/invoice/partner">
+                                <div class="form-group-sm" style="margin-left: 5%; width: 25%; float: left;">
+                                    <input class="form-control" style="width: 60%; float: left" type="text" name="year_date"
+                                           value="{{$current_month}}">
+                                    <input style="float: left" type="submit" class="btn btn-outline-info"
+                                           value="Search">
+                                </div>
+                            </form>
+
 
                         <div id="export_section" style="margin-left: 5%; width: 15%; float: right">
                             <button onclick="printDiv('lower_section')" style="width: 100%"
@@ -84,6 +85,7 @@
                                 <th>Operator</th>
                                 <th>MSISDN</th>
                                 <th>Payment</th>
+                                <th>NCMV limit</th>
                                 <th>Bill month</th>
                                 <th style="width: 15%">Discount</th>
                                 <th colspan="2" style="width: 25%">Action</th>
@@ -108,7 +110,7 @@
                                         <input type="submit" class="btn btn-sm btn-success" value="Confirm"
                                                form="my_form">
                                     </td>
-                                    <td rowspan="1">
+                                    <td>
                                         <button onclick="myFunction()" class="btn btn-sm btn-outline-danger">Invoice PDF</button>
                                     </td>
                                 </tr>

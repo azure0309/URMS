@@ -139,6 +139,7 @@ class PartnerUsageController extends Controller
         $lower_operators = [];
         $higher_operators = [];
         $search_from_list = [];
+        $converted_limit = 0;
         foreach ($grouped as $item) {
             $limit = SimThresholdModel::where('cust_urag', $item['country'])
                 ->where('cust_name', $item['operator'])->pluck('ncmv');
@@ -156,7 +157,8 @@ class PartnerUsageController extends Controller
         }
 
         $total_sim_payments = $list['total_sim_payment'];
-        $per_sim_payments = $list['per_sim_payment'];
+//        print_r($total_sim_payments);
+        $per_sim_payments = $list['per_sim_payment']; //Per sim processing dutuu baigaa yum bnshuu 20210222
 
 //        print_r($higher_operators);
         foreach ($total_sim_payments as $payment) {
@@ -166,13 +168,13 @@ class PartnerUsageController extends Controller
                 $send_invoice->operator = $payment['operator'];
                 $send_invoice->msisdn = $payment['prod_no'];
                 $send_invoice->payment = $payment['payment'];
+//                $send_invoice->nvmc = $payment['nvmc'];
                 if (empty($request)) {
                     $send_invoice->bill_month = $payment['bill_month'];
                 } else {
                     $send_invoice->bill_month = $request;
                 }
                 $send_invoice->bill_month = $request;
-                $send_invoice->currency = $currency[0];
 
 //                echo $send_invoice->country . ' ';
 //                echo $send_invoice->operator . ' ';
@@ -207,7 +209,6 @@ class PartnerUsageController extends Controller
                 } else {
                     $close_payment->bill_month = $request;
                 }
-                $close_payment->currency = $currency[0];
 
                 $select = ClosePaymentModel::where('country', $payment['country'])
                     ->where('operator', $payment['operator'])
@@ -233,33 +234,60 @@ class PartnerUsageController extends Controller
         }
     }
 
-    function close_whole_payment($country, $operator, $msisdn, $total, $bill_month, $currency)
+    function close_whole_payment($country, $operator, $msisdn, $total, $bill_month)
     {
         $close_payment = new ClosePaymentModel();
 
-        $close_payment->country = $country;
-        $close_payment->operator = $operator;
-        $close_payment->msisdn = $msisdn;
-        $close_payment->total = $total;
-        $close_payment->bill_month = $bill_month;
-        $close_payment->currency = $currency;
-        $close_payment->status = 'FROM_INVOICE';
-        $close_payment->save();
 
-        $invoice_id = SendInvoiceModel::where('country', $country)
+
+
+        if(ClosePaymentModel::where('country', $country)
             ->where('operator', $operator)
-            ->where('msisdn', $msisdn)
-            ->where('payment', $total)
-            ->where('bill_month', $bill_month)
-            ->where('currency', $currency)
-            ->pluck('id');
+            ->exists())
+        {
+            $last_discount = $isCountryInClose = ClosePaymentModel::where('country', $country)
+                ->where('operator', $operator)
+                ->pluck('total');
+            $new_discount = $last_discount[0] + $total;
+            $last_discounted_operator = ClosePaymentModel::where('country', $country)
+                ->where('operator', $operator)
+                ->pluck('id');
+            $find_last_operator = ClosePaymentModel::find($last_discounted_operator[0]);
+            $find_last_operator->total = $new_discount;
+            $find_last_operator->status = 'CONFIRMED';
+            $find_last_operator->save();
 
-        $delete_invoice = SendInvoiceModel::find($invoice_id[0]);
-        $delete_invoice->status = 'TO_CLOSE';
-        $delete_invoice->save();
+            $invoice_id = SendInvoiceModel::where('country', $country)
+                ->where('operator', $operator)
+                ->where('msisdn', $msisdn)
+                ->where('payment', $total)
+                ->where('bill_month', $bill_month)
+                ->pluck('id');
+            $delete_invoice = SendInvoiceModel::find($invoice_id[0]);
+            $delete_invoice->status = 'CONFIRMED';
+            $delete_invoice->save();
+        }else {
+            $close_payment->country = $country;
+            $close_payment->operator = $operator;
+            $close_payment->msisdn = $msisdn;
+            $close_payment->total = $total;
+            $close_payment->bill_month = $bill_month;
+            $close_payment->status = 'CONFIRMED';
+            $close_payment->save();
+
+            $invoice_id = SendInvoiceModel::where('country', $country)
+                ->where('operator', $operator)
+                ->where('msisdn', $msisdn)
+                ->where('payment', $total)
+                ->where('bill_month', $bill_month)
+                ->pluck('id');
+            $delete_invoice = SendInvoiceModel::find($invoice_id[0]);
+            $delete_invoice->status = 'CONFIRMED';
+            $delete_invoice->save();
+        }
     }
 
-    function discount($country, $operator, $msisdn, $total, $discount, $bill_month, $currency)
+    function discount($country, $operator, $msisdn, $total, $discount, $bill_month)
     {
         $close_payment = new ClosePaymentModel();
 
@@ -269,22 +297,49 @@ class PartnerUsageController extends Controller
             ->where('msisdn', $msisdn)
             ->where('payment', $total)
             ->where('bill_month', $bill_month)
-            ->where('currency', $currency)
             ->pluck('id');
 
         $send_invoice = SendInvoiceModel::find($invoice_id[0]);
         $send_invoice->payment = $new_total;
-        $send_invoice->status = 'TO_CLOSE';
+        $send_invoice->status = 'DISCOUNTED';
         $send_invoice->save();
 
-        $close_payment->country = $country;
-        $close_payment->operator = $operator;
-        $close_payment->msisdn = $msisdn;
-        $close_payment->total = $discount;
-        $close_payment->bill_month = $bill_month;
-        $close_payment->currency = $currency;
-        $close_payment->status = 'FROM_INVOICE';
-        $close_payment->save();
+        if(ClosePaymentModel::where('country', $country)
+            ->where('operator', $operator)
+            ->exists())
+        {
+            $last_discount = $isCountryInClose = ClosePaymentModel::where('country', $country)
+                ->where('operator', $operator)
+                ->pluck('total');
+            $new_discount = $last_discount[0] + $discount;
+            $last_discounted_operator = ClosePaymentModel::where('country', $country)
+                ->where('operator', $operator)
+                ->pluck('id');
+            $find_last_operator = ClosePaymentModel::find($last_discounted_operator[0]);
+            $find_last_operator->total = $new_discount;
+            $find_last_operator->save();
+        }else{
+            $close_payment->country = $country;
+            $close_payment->operator = $operator;
+            $close_payment->msisdn = $msisdn;
+            $close_payment->total = $discount;
+            $close_payment->bill_month = $bill_month;
+            $close_payment->status = 'DISCOUNTED';
+            $close_payment->save();
+        }
+
+
+        $isCountryInClose = ClosePaymentModel::where('country', $country)
+            ->where('operator', $operator)
+            ->pluck('id');
+            $last_discount = $isCountryInClose = ClosePaymentModel::where('country', $country)
+                ->where('operator', $operator)
+                ->pluck('total');
+//            $new_discount = $discount + $last_discount[0];
+//            $close_payment = ClosePaymentModel::find($isCountryInClose[0]);
+//            $close_payment->total = $new_discount;
+//            $close_payment->save();
+
     }
 
     function show(Request $request)
@@ -305,10 +360,12 @@ class PartnerUsageController extends Controller
 //        echo $bill_month;
 //        echo $currency;
 
-        if (!empty($country) && !empty($operator) && !empty($msisdn) && !empty($total) && !empty($discount) && !empty($bill_month) && !empty($currency)) {
-            $this->discount($country, $operator, $msisdn, $total, $discount, $bill_month, $currency);
-        } elseif (!empty($country) && !empty($operator) && !empty($msisdn) && !empty($total) && empty($discount) && !empty($bill_month) && !empty($currency)) {
-            $this->close_whole_payment($country, $operator, $msisdn, $total, $bill_month, $currency);
+        if (!empty($country) && !empty($operator) && !empty($msisdn) && !empty($total) && !empty($discount) && !empty($bill_month)) {
+//            echo 'test';
+            $this->discount($country, $operator, $msisdn, $total, $discount, $bill_month);
+        } elseif (!empty($country) && !empty($operator) && !empty($msisdn) && !empty($total) && empty($discount) && !empty($bill_month)) {
+//            echo 'lol';
+            $this->close_whole_payment($country, $operator, $msisdn, $total, $bill_month);
         }
 
         $year_date = $request->input('year_date');
@@ -323,56 +380,50 @@ class PartnerUsageController extends Controller
         $close_payment = ClosePaymentModel::where('bill_month', $year_date)->get();
         $send_invoice = SendInvoiceModel::where('bill_month', $year_date)
             ->where('status', null)
+            ->orWhere('status', 'DISCOUNTED')
             ->orderBy('operator')
             ->get();
 
         $to_array_invoice = [];
 
-        foreach ($send_invoice as $item){
+        foreach ($send_invoice as $item) {
             array_push($to_array_invoice, [
                 'country' => $item['country'],
                 'operator' => $item['operator'],
-                'msisdn'=> $item['msisdn'],
+                'msisdn' => $item['msisdn'],
                 'payment' => $item['payment'],
                 'bill_month' => $item['bill_month']
             ]);
         }
 
-        $group_invoice = $this->sum_total_payments($send_invoice);
-        $total_invoice_list = [];
-        foreach ($group_invoice as $item) {
-            $limit = SimThresholdModel::where('cust_urag', $item['country'])
-                ->where('cust_name', $item['operator'])->pluck('ncmv');
-            $currency = SimThresholdModel::where('cust_urag', $item['country'])
-                ->where('cust_name', $item['operator'])->pluck('currency');
-            $get_currency = CurrencyModel::where('currency', $currency)->pluck('amount');
-            $converted_limit = $limit[0] * $get_currency[0];
-            $item['limit'] = $converted_limit;
+//        $group_invoice = $this->sum_total_payments($send_invoice);
+//        $total_invoice_list = [];
+//        foreach ($group_invoice as $item) {
+//            $limit = SimThresholdModel::where('cust_urag', $item['country'])
+//                ->where('cust_name', $item['operator'])->pluck('ncmv');
+//            $currency = SimThresholdModel::where('cust_urag', $item['country'])
+//                ->where('cust_name', $item['operator'])->pluck('currency');
+//            $get_currency = CurrencyModel::where('currency', $currency)->pluck('amount');
+//            $converted_limit = $limit[0] * $get_currency[0];
+//            $item['limit'] = $converted_limit;
+////            print_r($item);
+//            array_push($total_invoice_list, [
+//                'country' => $item['country'],
+//                'operator' => $item['operator'],
+//                'payment' => $item['payment'],
+//                'bill_month' => $item['bill_month'],
+//                'limit' => $item['limit']
+//            ]);
+//        }
+//        foreach ($total_invoice_list as $item){
 //            print_r($item);
-            array_push($total_invoice_list, [
-                'country' => $item['country'],
-                'operator' => $item['operator'],
-                'payment' => $item['payment'],
-                'bill_month' => $item['bill_month'],
-                'limit' => $item['limit']
-            ]);
-        }
-        $count = 0;
-        $var = '';
-//        foreach ($to_array_invoice as $item){
-//            $var = $item['country'];
-//
-//            if($item['country'] == $var){
-//                $count += 1;
-//            }
-//            echo $var . $count;
 //        }
 
         return view('partner_invoice',
             [
                 'close_payment' => $close_payment,
                 'send_invoice' => $send_invoice,
-                'total_invoice_list' => $total_invoice_list,
+//                'total_invoice_list' => $total_invoice_list,
                 'year_date' => $year_date,
                 'current_month' => $currentMonth
             ]

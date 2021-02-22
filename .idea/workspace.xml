@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/payment_case.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +172,27 @@
       <workItem from="1607831785284" duration="8798000" />
       <workItem from="1607896835795" duration="16572000" />
       <workItem from="1607933664716" duration="1057000" />
-      <workItem from="1607999989108" duration="12462000" />
+      <workItem from="1607999989108" duration="13142000" />
+      <workItem from="1608083959570" duration="8719000" />
+      <workItem from="1608267203374" duration="602000" />
+      <workItem from="1608285564584" duration="600000" />
+      <workItem from="1608538305991" duration="1247000" />
+      <workItem from="1608865269664" duration="3071000" />
+      <workItem from="1609094962277" duration="823000" />
+      <workItem from="1609277363760" duration="1062000" />
+      <workItem from="1609921754580" duration="617000" />
+      <workItem from="1610930301516" duration="137000" />
+      <workItem from="1610930600004" duration="2386000" />
+      <workItem from="1611209796162" duration="1212000" />
+      <workItem from="1611562193696" duration="624000" />
+      <workItem from="1611711020237" duration="3645000" />
+      <workItem from="1611728504047" duration="598000" />
+      <workItem from="1612420138578" duration="622000" />
+      <workItem from="1612423793988" duration="1200000" />
+      <workItem from="1612944372463" duration="599000" />
+      <workItem from="1613371552428" duration="1215000" />
+      <workItem from="1613542998926" duration="1213000" />
+      <workItem from="1613925171407" duration="13859000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -497,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608013300050</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.3">
+      <created>1608013430288</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1608013430288</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,6 +578,17 @@
     <MESSAGE value="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.2" />
     <MESSAGE value="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.3" />
     <option name="LAST_COMMIT_MESSAGE" value="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php</url>
+          <line>160</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>

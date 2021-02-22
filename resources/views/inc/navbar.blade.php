@@ -119,8 +119,14 @@
                     Invoice Automation
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{url('invoice/partner')}}">Roaming Partner Test</a>
-                    <a class="dropdown-item" href="{{url('invoice/service')}}">Roaming Service Test</a>
+                    <a class="dropdown-item" href="{{url('invoice/partner')}}">Bill & Payment List</a>
+                    <a class="dropdown-item" href="{{url('invoice/payment_case')}}">Payment Case</a>
+                    <a class="dropdown-item" href="{{url('#')}}">SIM Register -- Outbound SIM</a>
+                    <a class="dropdown-item" href="{{url('#')}}">SIM Register -- Inbound SIM</a>
+                    <h5 class="dropdown-header">Other</h5>
+                    <a class="dropdown-item" href="{{url('invoice/msisdn')}}">Search Payments</a>
+                    <a class="dropdown-item" href="{{url('#')}}">Partners Information</a>
+{{--                    <a class="dropdown-item" href="{{url('invoice/service')}}">Roaming Service Test</a>--}}
                 </div>
             </li>
         </ul>
