@@ -88,6 +88,10 @@ Route::get('/invoice/payment_case', 'PaymentCaseController@show');
 Route::get('/invoice/payment_case/add', 'PaymentCaseController@add_page');
 Route::get('/invoice/partner_information', 'PartnerInformationController@show');
 Route::get('/invoice/partner_information/add', 'PartnerInformationController@add_page');
+Route::get('/invoice/partner_information/add/store', 'PartnerInformationController@store');
+Route::get('/invoice/partner_information/delete', 'PartnerInformationController@delete');
+Route::get('/invoice/partner_information/edit', 'PartnerInformationController@edit_show');
+Route::get('/invoice/partner_information/edit/done', 'PartnerInformationController@edit');
 
 
 

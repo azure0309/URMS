@@ -24,7 +24,7 @@
                                 <th>Phone</th>
                                 <th>Email</th>
                                 <th>PMN Code</th>
-                                <th>Action</th>
+                                <th colspan="2">Action</th>
                             </tr>
                             @foreach($all_partner_info as $info)
                             <tr>
@@ -34,7 +34,8 @@
                                 <td>{{$info['phone']}}</td>
                                 <td>{{$info['email']}}</td>
                                 <td>{{$info['pmn_code']}}</td>
-                                <td><button class="btn btn-sm btn-outline-warning">Edit</td>
+                                <td><a href="/invoice/partner_information/edit?id={{$info['id']}}"><button class="btn btn-sm btn-outline-warning">Edit</button></a></td>
+                                <td><a href="/invoice/partner_information/delete?id={{$info['id']}}"><button class="btn btn-sm btn-danger">Delete</button></a></td>
                             </tr>
                             @endforeach
                         </table>

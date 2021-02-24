@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/partner_info_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PrintInvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PrintInvoiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/invoice_printer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invoice_printer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerInformationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerInformationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestNumbersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestNumbersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner_info.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_info.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner_info_store.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_info_store.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +35,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="NamedScopeManager">
     <scope name="azure" pattern="" />
@@ -190,14 +203,7 @@
       <workItem from="1612944372463" duration="599000" />
       <workItem from="1613371552428" duration="1215000" />
       <workItem from="1613542998926" duration="1213000" />
-      <workItem from="1613925171407" duration="48503000" />
-    </task>
-    <task id="LOCAL-00002" summary="fixed bug initst, initend in Real Time Monitor">
-      <created>1564631984723</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1564631984723</updated>
+      <workItem from="1613925171407" duration="63702000" />
     </task>
     <task id="LOCAL-00003" summary="rollback for 01 August update &quot;fixed bug initst, initend in Real Time Monitor&quot;">
       <created>1564897740522</created>
@@ -535,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614129053407</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Print invoice, add partner info features are done&#10;&#10; commit#6.1">
+      <created>1614129376481</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1614129376482</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +570,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed initend 2019-12-31" />
     <MESSAGE value="fixed initend 2020-01-01" />
     <MESSAGE value="added iso_code add ReferenceController.php commit#1" />
     <MESSAGE value="fixed edit, delete functions ReferenceController.php commit#1" />
@@ -582,7 +594,8 @@
     <MESSAGE value="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.3" />
     <MESSAGE value="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.4" />
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Print invoice, add partner info features are done&#10;&#10; commit#6.0" />
+    <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Print invoice, add partner info features are done&#10;&#10; commit#6.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

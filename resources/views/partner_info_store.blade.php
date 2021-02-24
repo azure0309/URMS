@@ -13,7 +13,7 @@
                             </div>
                         @endif
 
-                        <form action="/invoice/partner_information" method="get">
+                        <form action="/invoice/partner_information/add/store" method="get">
                             <div class="form-group">
                                 <label for="Country">Country</label>
                                 <input type="text" class="form-control" name="country" placeholder="Mongolia">
