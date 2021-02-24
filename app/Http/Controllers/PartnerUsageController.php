@@ -11,6 +11,8 @@ use App\SimUsageModel;
 use App\SimThresholdModel;
 use App\SimInfoModel;
 use App\CurrencyModel;
+use App\PartnerInformationModel;
+use phpDocumentor\Reflection\Location;
 
 class PartnerUsageController extends Controller
 {
@@ -163,12 +165,20 @@ class PartnerUsageController extends Controller
 //        print_r($higher_operators);
         foreach ($total_sim_payments as $payment) {
             if (in_array($payment['country'] . '_' . $payment['operator'], $higher_operators)) {
+
+                $limit = SimThresholdModel::where('cust_urag', $payment['country'])
+                    ->where('cust_name', $payment['operator'])->pluck('ncmv');
+                $currency = SimThresholdModel::where('cust_urag', $payment['country'])
+                    ->where('cust_name', $payment['operator'])->pluck('currency');
+                $get_currency = CurrencyModel::where('currency', $currency)->pluck('amount');
+                $converted_limit = $limit[0] * $get_currency[0];
+
                 $send_invoice = new SendInvoiceModel();
                 $send_invoice->country = $payment['country'];
                 $send_invoice->operator = $payment['operator'];
                 $send_invoice->msisdn = $payment['prod_no'];
                 $send_invoice->payment = $payment['payment'];
-//                $send_invoice->nvmc = $payment['nvmc'];
+                $send_invoice->limit = $converted_limit;
                 if (empty($request)) {
                     $send_invoice->bill_month = $payment['bill_month'];
                 } else {
@@ -339,18 +349,43 @@ class PartnerUsageController extends Controller
 //            $close_payment = ClosePaymentModel::find($isCountryInClose[0]);
 //            $close_payment->total = $new_discount;
 //            $close_payment->save();
-
     }
 
     function show(Request $request)
     {
-        $country = $request->input('country');
-        $operator = $request->input('operator');
-        $msisdn = $request->input('msisdn');
-        $total = $request->input('total');
-        $discount = $request->input('discount');
-        $bill_month = $request->input('bill_month');
-        $currency = $request->input('currency');
+        $partner_info = [];
+        $sum_amt = 0;
+        $limit = 0;
+        if ($request->input('action') == 'InvoicePDF'){
+
+            $country = $request->input('country');
+            $operator = $request->input('operator');
+            $limit = $request->input('limit');
+
+            $isPartnerRegistered = PartnerInformationModel::where('country', strtoupper($country))
+                ->where('partner_name', strtoupper($operator))->count();
+            if($isPartnerRegistered == 0){
+                echo 'tyest';
+                echo "<script>alert('Энэ partner-ийн мэдээлэл байхгүй байна. Мэдээллийг нэмнэ үү');
+                    window.location.href='/invoice/partner_information/add';
+                        </script>";
+            }else{
+                $partner_info = PartnerInformationModel::where('country', strtoupper($country))
+                    ->where('partner_name', strtoupper($operator))->get();
+                $sum_amt = SendInvoiceModel::where('country', strtoupper($country))
+                    ->where('operator', strtoupper($operator))
+                    ->groupBy('country')
+                    ->groupBy('operator')
+                    ->sum('payment');
+            }
+        }else {
+            $country = $request->input('country');
+            $operator = $request->input('operator');
+            $msisdn = $request->input('msisdn');
+            $total = $request->input('total');
+            $discount = $request->input('discount');
+            $bill_month = $request->input('bill_month');
+            $currency = $request->input('currency');
 
 //        echo $country;
 //        echo $operator;
@@ -360,14 +395,28 @@ class PartnerUsageController extends Controller
 //        echo $bill_month;
 //        echo $currency;
 
-        if (!empty($country) && !empty($operator) && !empty($msisdn) && !empty($total) && !empty($discount) && !empty($bill_month)) {
+            if (!empty($country) && !empty($operator) && !empty($msisdn) && !empty($total) && !empty($discount) && !empty($bill_month)) {
 //            echo 'test';
-            $this->discount($country, $operator, $msisdn, $total, $discount, $bill_month);
-        } elseif (!empty($country) && !empty($operator) && !empty($msisdn) && !empty($total) && empty($discount) && !empty($bill_month)) {
+                $this->discount($country, $operator, $msisdn, $total, $discount, $bill_month);
+            } elseif (!empty($country) && !empty($operator) && !empty($msisdn) && !empty($total) && empty($discount) && !empty($bill_month)) {
 //            echo 'lol';
-            $this->close_whole_payment($country, $operator, $msisdn, $total, $bill_month);
-        }
+                $this->close_whole_payment($country, $operator, $msisdn, $total, $bill_month);
+            }
 
+            header('location: /invoice/partner');
+
+//            $to_array_invoice = [];
+//
+//            foreach ($send_invoice as $item) {
+//                array_push($to_array_invoice, [
+//                    'country' => $item['country'],
+//                    'operator' => $item['operator'],
+//                    'msisdn' => $item['msisdn'],
+//                    'payment' => $item['payment'],
+//                    'bill_month' => $item['bill_month']
+//                ]);
+//            }
+        }
         $year_date = $request->input('year_date');
         $currentMonth = intval(date('Ym', strtotime("-1 month")));
 
@@ -383,19 +432,6 @@ class PartnerUsageController extends Controller
             ->orWhere('status', 'DISCOUNTED')
             ->orderBy('operator')
             ->get();
-
-        $to_array_invoice = [];
-
-        foreach ($send_invoice as $item) {
-            array_push($to_array_invoice, [
-                'country' => $item['country'],
-                'operator' => $item['operator'],
-                'msisdn' => $item['msisdn'],
-                'payment' => $item['payment'],
-                'bill_month' => $item['bill_month']
-            ]);
-        }
-
 //        $group_invoice = $this->sum_total_payments($send_invoice);
 //        $total_invoice_list = [];
 //        foreach ($group_invoice as $item) {
@@ -425,7 +461,10 @@ class PartnerUsageController extends Controller
                 'send_invoice' => $send_invoice,
 //                'total_invoice_list' => $total_invoice_list,
                 'year_date' => $year_date,
-                'current_month' => $currentMonth
+                'current_month' => $currentMonth,
+                'partner_info' => $partner_info,
+                'sum_amount'=> $sum_amt,
+                'limit' => $limit
             ]
         );
     }

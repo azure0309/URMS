@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/payment_case.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/invoice_printer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partner_info.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partner_info_store.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/payment_case_store.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentCaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentCaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestNumbersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestNumbersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/payment_case.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payment_case.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,11 +63,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Let's make some meme\PhpstormProjects\URMS\resources\views" />
       <recent name="C:\Users\User\PhpstormProjects\URMS\resources\views" />
       <recent name="C:\Users\User\PhpstormProjects\URMS\resources" />
     </key>
@@ -192,7 +200,7 @@
       <workItem from="1612944372463" duration="599000" />
       <workItem from="1613371552428" duration="1215000" />
       <workItem from="1613542998926" duration="1213000" />
-      <workItem from="1613925171407" duration="13859000" />
+      <workItem from="1613925171407" duration="48174000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Division by zero on controller &quot;quality_result&quot;">
       <created>1563764408630</created>
@@ -530,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608013430288</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.4">
+      <created>1613981305876</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1613981305876</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,7 +567,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed initend 2019-10-01" />
     <MESSAGE value="fixed initend 2019-11-01" />
     <MESSAGE value="fixed initend 2019-12-31" />
     <MESSAGE value="fixed initend 2020-01-01" />
@@ -577,14 +591,15 @@
     <MESSAGE value="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.1" />
     <MESSAGE value="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.2" />
     <MESSAGE value="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.3" />
+    <MESSAGE value="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php</url>
-          <line>160</line>
+          <line>162</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

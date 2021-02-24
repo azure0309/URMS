@@ -30,28 +30,28 @@
 
                     </form>
                     <div class="card-body">
-{{--                        <table border="1">--}}
-{{--                            <tr>--}}
-{{--                                <th>MSISDN</th>--}}
-{{--                                <th>bill_month</th>--}}
-{{--                                <th>tot_bill_amt</th>--}}
-{{--                                <th>over_pym</th>--}}
-{{--                                <th>pym_amt</th>--}}
-{{--                                <th>upaid_amt</th>--}}
-{{--                                <th>bill_status</th>--}}
-{{--                            </tr>--}}
-{{--                            @foreach($infos as $info)--}}
-{{--                                <tr>--}}
-{{--                                    <td>{{$info['prod_no']}}</td>--}}
-{{--                                    <td>{{$info['bill_month']}}</td>--}}
-{{--                                    <td>{{$info['tot_bill_amt']}}</td>--}}
-{{--                                    <td>{{$info['over_pym']}}</td>--}}
-{{--                                    <td>{{$info['pym_amt']}}</td>--}}
-{{--                                    <td>{{$info['upaid_amt']}}</td>--}}
-{{--                                    <td>{{$info['bill_status']}}</td>--}}
-{{--                                </tr>--}}
-{{--                            @endforeach--}}
-{{--                        </table>--}}
+                        <table class="table table-hover" border="1">
+                            <tr>
+                                <th>MSISDN</th>
+                                <th>Bill Month</th>
+                                <th>Total Payment</th>
+                                <th>Over PYM</th>
+                                <th>PYM Amount</th>
+                                <th>Unpaid Amount</th>
+                                <th>Status</th>
+                            </tr>
+                            @foreach($last_month as $info)
+                                <tr>
+                                    <td>{{$info['prod_no']}}</td>
+                                    <td>{{$info['bill_month']}}</td>
+                                    <td>{{$info['tot_bill_amt']}}</td>
+                                    <td>{{$info['over_pym']}}</td>
+                                    <td>{{$info['pym_amt']}}</td>
+                                    <td>{{$info['upaid_amt']}}</td>
+                                    <td>{{$info['bill_status']}}</td>
+                                </tr>
+                            @endforeach
+                        </table>
                     </div>
                 </div>
             </div>

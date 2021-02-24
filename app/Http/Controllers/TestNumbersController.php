@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\SimThresholdModel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\SimUsageModel;
@@ -51,26 +52,33 @@ class TestNumbersController extends Controller
         $select_country = SimInfoModel::where('country', '!=', 'SERVICE_PROVIDER')->pluck('country');
         $select_operator = SimInfoModel::pluck('name');
 
-        $country = $request->input('country');
-        $operator = $request->input('operator');
+        $currentMonth = intval(date('Ym', strtotime("-1 month")));
 
-//        echo $country;
-//        echo $operator;
+        $last_month = SimUsageModel::where('bill_month', $currentMonth)->get();
 
-        $findNumbersOfCountry = SimInfoModel::where('country', $country)
-            ->where('name', $operator)->pluck('prod_no');
+//        foreach ($last_month as $numbers) {
+////            $country_info = SimInfoModel::where('prod_no', $last_month)->pluck('country');
+//            $operator_info = SimInfoModel::where('prod_no', $last_month)->pluck('name');
+//            print_r($operator_info);
+//        }
+//        $country_nvmc = SimThresholdModel::all('cust_urag', 'cust_name');
+//        $country_info = SimInfoModel::where('prod_no', $last_month)->pluck('country');
+//        $operator_info = SimInfoModel::where('prod_no', $last_month)->pluck('name');
 
-        $info = $this->findNumbersOfCountry($findNumbersOfCountry);
 
-        $test_array = ['col1'=>'tuguldur', 'col2'=>'oyuka'];
+//        foreach ($country_nvmc as $nvmc){
+//            $formatted_name = $nvmc['cust_urag'] . '_' . $nvmc['cust_name'];
+//            if($formatted_name == $country_info . '_' . $operator_info){
+//                echo $formatted_name;
+//            }
+//        }
 
 
         return view('partner_operators',
             [
                 'countries' => $select_country,
                 'operators'=>$select_operator,
-                'infos'=> $info,
-                'test_array'=>$test_array
+                'last_month' => $last_month
             ]);
     }
 }

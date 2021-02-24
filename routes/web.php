@@ -81,9 +81,13 @@ Route::get('/report/quality_report', 'quality_result@result_sig');
 Route::get('/report/datatable', 'datatableController@show');
 
 Route::get('/invoice/partner', 'PartnerUsageController@show');
+Route::get('/invoice/partner/print', 'PrintInvoiceController@show');
 Route::get('/invoice/service', 'ServiceUsageController@show');
 Route::get('/invoice/msisdn', 'TestNumbersController@show');
 Route::get('/invoice/payment_case', 'PaymentCaseController@show');
+Route::get('/invoice/payment_case/add', 'PaymentCaseController@add_page');
+Route::get('/invoice/partner_information', 'PartnerInformationController@show');
+Route::get('/invoice/partner_information/add', 'PartnerInformationController@add_page');
 
 
 
