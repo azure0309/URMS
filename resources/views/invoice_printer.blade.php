@@ -22,7 +22,7 @@
                                 <div id="invoice_section_1"
                                      style="; border: #0a0a0a; height: 150rem; width: 100%; margin-left: auto; margin-right: auto; padding: 5%">
                                     <div style="width: 100%; height: 5%; ">
-                                        <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+                                        <img src="{{ asset('images/logo.png') }}" width="20%">
                                     </div>
                                     <div style="width: 100%; height:25%;">
                                         @foreach($partner_info as $info)

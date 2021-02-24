@@ -22,19 +22,13 @@
                             @foreach($payment_cases as $item)
                                 <tr>
                                     <form method="GET" id="my_form" action="#"></form>
-                                    <td><input type="hidden" name="cust_urag" form="my_form"
-                                        value="{{$item['cust_urag']}}">{{$item['cust_urag']}}</td>
-                                    <td><input type="hidden" name="cust_name" form="my_form"
-                                               value="{{$item['cust_name']}}">{{$item['cust_name']}}</td>
-                                    <td><input type="hidden" name="prod_cd" form="my_form"
-                                               value="{{$item['prod_cd']}}">{{$item['prod_cd']}}</td>
-                                    <td><input type="hidden" name="ncmv" form="my_form"
-                                               value="{{$item['ncmv']}}">{{$item['ncmv']}}</td>
-                                    <td><input type="hidden" name="currency" form="my_form"
-                                               value="{{$item['currency']}}">{{$item['currency']}}</td>
-                                    <td><input type="hidden" name="note" form="my_form"
-                                               value="{{$item['note']}}">{{$item['note']}}</td>
-                                    <td><input class="btn btn-outline-warning btn-sm" type="submit" form="my_form" value="Edit"></td>
+                                    <td>{{$item['cust_urag']}}</td>
+                                    <td>{{$item['cust_name']}}</td>
+                                    <td>{{$item['prod_cd']}}</td>
+                                    <td>{{$item['ncmv']}}</td>
+                                    <td>{{$item['currency']}}</td>
+                                    <td>{{$item['note']}}</td>
+                                    <td><a href="/invoice/payment_case/edit?id={{$item['id']}}"><button class="btn btn-outline-warning btn-sm">Edit</button></a></td>
                                 </tr>
                             @endforeach
                         </table>

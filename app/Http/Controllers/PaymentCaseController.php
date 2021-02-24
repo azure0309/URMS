@@ -40,4 +40,33 @@ class PaymentCaseController extends Controller
         return view('payment_case_store');
     }
 
+    function edit_page(Request $request)
+    {
+        $id = $request->input('id');
+        $payment_case = SimThresholdModel::where('id', $id)->get();
+        return view('payment_case_edit',
+        [
+            'payment_case'=>$payment_case
+        ]);
+    }
+    function edit(Request $request){
+        $id = $request->input('id');
+        $cust_urag = $request->input('cust_urag');
+        $cust_name = $request->input('cust_name');
+        $prod_cd = $request->input('prod_cd');
+        $ncmv = $request->input('ncmv');
+        $currency = $request->input('currency');
+        $note = $request->input('note');
+
+        $payment_case = SimThresholdModel::find($id);
+        $payment_case->cust_urag = $cust_urag;
+        $payment_case->cust_name = $cust_name;
+        $payment_case->prod_cd = $prod_cd;
+        $payment_case->ncmv = $ncmv;
+        $payment_case->currency = $currency;
+        $payment_case->note = $note;
+        $payment_case->save();
+
+        return redirect('/invoice/payment_case');
+    }
 }

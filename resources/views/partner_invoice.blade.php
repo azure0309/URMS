@@ -110,6 +110,7 @@
                                         <td><input type="text" style="width: 92%" name="discount" form="my_form"
                                                    placeholder="discount"></td>
                                         <td>
+
                                             <input type="submit" class="btn btn-sm btn-success" value="Confirm"
                                                    name="action"
                                                    form="my_form">
@@ -128,7 +129,6 @@
                                         </td>
                                     </tr>
                                 @endforeach
-
                             </table>
                         </div>
                     </div>

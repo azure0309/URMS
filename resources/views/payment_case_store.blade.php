@@ -42,7 +42,7 @@
                                     <select class="form-control" name="note">
                                         <option>total SIM</option>
                                         <option>per SIM</option>
-                                        <option>per PLSM</option>
+                                        <option>per PLMN</option>
                                     </select>
                                 </div>
                                 <div class="form-group">

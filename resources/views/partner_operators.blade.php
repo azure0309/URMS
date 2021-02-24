@@ -80,7 +80,7 @@
                             @endforeach
                         </table>
                     </div>
-                    <div id='last_month' class="card-body" style="display: none">
+                    <div id='last_month' class="card-body">
                         <h3>Сүүлийн сарын бүх дугаарын хэрэглээ</h3>
                         <table class="table table-hover" border="1">
                             <tr>

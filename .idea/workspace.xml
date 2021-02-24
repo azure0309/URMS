@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/partner_info_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/payment_case_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerInformationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerInformationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestNumbersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestNumbersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partner_info.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_info.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partner_info_store.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_info_store.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentCaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentCaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/download.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/download.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/invoice_printer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invoice_printer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/payment_case.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payment_case.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/payment_case_store.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payment_case_store.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +74,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Let's make some meme\PhpstormProjects\URMS\resources\img" />
       <recent name="C:\Users\Let's make some meme\PhpstormProjects\URMS\resources\views" />
       <recent name="C:\Users\User\PhpstormProjects\URMS\resources\views" />
       <recent name="C:\Users\User\PhpstormProjects\URMS\resources" />
@@ -203,14 +206,7 @@
       <workItem from="1612944372463" duration="599000" />
       <workItem from="1613371552428" duration="1215000" />
       <workItem from="1613542998926" duration="1213000" />
-      <workItem from="1613925171407" duration="63702000" />
-    </task>
-    <task id="LOCAL-00003" summary="rollback for 01 August update &quot;fixed bug initst, initend in Real Time Monitor&quot;">
-      <created>1564897740522</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1564897740522</updated>
+      <workItem from="1613925171407" duration="67806000" />
     </task>
     <task id="LOCAL-00004" summary="&quot;fixed bug initst, initend in Real Time Monitor&quot;">
       <created>1564898600283</created>
@@ -548,7 +544,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614129376482</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Print invoice, add partner info features are done&#10;&#10; commit#6.2">
+      <created>1614144735498</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1614144735498</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +573,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed initend 2020-01-01" />
     <MESSAGE value="added iso_code add ReferenceController.php commit#1" />
     <MESSAGE value="fixed edit, delete functions ReferenceController.php commit#1" />
     <MESSAGE value="modified Continents in reference.blade.php commit#2" />
@@ -595,7 +597,8 @@
     <MESSAGE value="Module can close payment of higher payment than threshold. and put value for discount dynamically and close the payment from by discount value&#10;&#10; commit#5.7.4" />
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.0" />
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Print invoice, add partner info features are done&#10;&#10; commit#6.1" />
+    <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Print invoice, add partner info features are done&#10;&#10; commit#6.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

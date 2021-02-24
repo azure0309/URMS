@@ -86,6 +86,8 @@ Route::get('/invoice/service', 'ServiceUsageController@show');
 Route::get('/invoice/msisdn', 'TestNumbersController@show');
 Route::get('/invoice/payment_case', 'PaymentCaseController@show');
 Route::get('/invoice/payment_case/add', 'PaymentCaseController@add_page');
+Route::get('/invoice/payment_case/edit', 'PaymentCaseController@edit_page');
+Route::get('/invoice/payment_case/edit/done', 'PaymentCaseController@edit');
 Route::get('/invoice/partner_information', 'PartnerInformationController@show');
 Route::get('/invoice/partner_information/add', 'PartnerInformationController@add_page');
 Route::get('/invoice/partner_information/add/store', 'PartnerInformationController@store');
