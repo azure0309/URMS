@@ -13,6 +13,9 @@ class PrintInvoiceController extends Controller
     function show(Request $request)
     {
         $partner_info = [];
+        $send_invoice = [];
+        $close_payment = [];
+        $year_date = $request->input('year_date');
         $sum_amt = 0;
         $limit = 0;
         if ($request->input('action') == 'InvoicePDF'){
@@ -34,6 +37,15 @@ class PrintInvoiceController extends Controller
             }else{
                 $partner_info = PartnerInformationModel::where('country', strtoupper($country))
                     ->where('partner_name', strtoupper($operator))->get();
+                $send_invoice = SendInvoiceModel::where('bill_month', $year_date)
+                    ->where('country', $country)
+                    ->where('operator', $operator)
+                    ->where(function($query){
+                        $query->where('status', null)
+                            ->Orwhere('status', 'DISCOUNTED');
+                    })
+                    ->get();
+                $close_payment = ClosePaymentModel::where('bill_month', $year_date)->get();
                 $sum_amt = SendInvoiceModel::where('country', strtoupper($country))
                     ->where('operator', strtoupper($operator))
                     ->groupBy('country')
@@ -42,7 +54,7 @@ class PrintInvoiceController extends Controller
 //                print_r($sum_amt);
             }
         }
-        $year_date = $request->input('year_date');
+
         $currentMonth = intval(date('Ym', strtotime("-1 month")));
 
         if (empty($year_date)) {
@@ -50,14 +62,7 @@ class PrintInvoiceController extends Controller
         }
 
 
-        $close_payment = ClosePaymentModel::where('bill_month', $year_date)->get();
-        $send_invoice = SendInvoiceModel::where('bill_month', $year_date)
-            ->where('country', $country)
-            ->where('operator', $operator)
-            ->where('status', null)
-            ->orWhere('status', 'DISCOUNTED')
-            ->orderBy('operator')
-            ->get();
+
 
         return view('invoice_printer',
             [

@@ -33,16 +33,16 @@
                                                 </tr>
                                                 <tr>
                                                     <th width="50%"></th>
-                                                    <th width="50%"><p style="text-align: right; font-variant: small-caps">Date: </p></th>
+                                                    <th width="50%"><p style="text-align: right; font-variant: small-caps">Date: 02/24/2021</p></th>
                                                 </tr>
                                                 <tr>
                                                     <th width="50%"></th>
-                                                    <th width="50%"><p style="text-align: right; font-variant: small-caps">Invoice for: </p>
+                                                    <th width="50%"><p style="text-align: right; font-variant: small-caps">Invoice for: February 2021</p>
                                                     </th>
                                                 </tr>
                                                 <tr>
                                                     <th width="50%"></th>
-                                                    <th width="50%"><p style="text-align: right; font-variant: small-caps">Due date: </p>
+                                                    <th width="50%"><p style="text-align: right; font-variant: small-caps">Due date: 03/24/2021</p>
                                                     </th>
                                                 </tr>
                                                 <tr>

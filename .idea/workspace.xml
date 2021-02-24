@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/payment_case_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentCaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentCaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/download.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/download.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PrintInvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PrintInvoiceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/invoice_printer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invoice_printer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/payment_case.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payment_case.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/payment_case_store.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payment_case_store.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,14 +200,7 @@
       <workItem from="1612944372463" duration="599000" />
       <workItem from="1613371552428" duration="1215000" />
       <workItem from="1613542998926" duration="1213000" />
-      <workItem from="1613925171407" duration="67806000" />
-    </task>
-    <task id="LOCAL-00004" summary="&quot;fixed bug initst, initend in Real Time Monitor&quot;">
-      <created>1564898600283</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1564898600283</updated>
+      <workItem from="1613925171407" duration="71458000" />
     </task>
     <task id="LOCAL-00005" summary="&quot;fixed bug initst, initend in Real Time Monitor&quot;">
       <created>1564966722165</created>
@@ -551,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614144735498</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Print invoice, add partner info features are done&#10;&#10; commit#6.3">
+      <created>1614155825672</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1614155825672</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +567,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added iso_code add ReferenceController.php commit#1" />
     <MESSAGE value="fixed edit, delete functions ReferenceController.php commit#1" />
     <MESSAGE value="modified Continents in reference.blade.php commit#2" />
     <MESSAGE value="changed Action button color on AlarmController.php commit#3" />
@@ -598,7 +591,8 @@
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.0" />
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.1" />
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Print invoice, add partner info features are done&#10;&#10; commit#6.2" />
+    <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Print invoice, add partner info features are done&#10;&#10; commit#6.3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -428,8 +428,10 @@ class PartnerUsageController extends Controller
 
         $close_payment = ClosePaymentModel::where('bill_month', $year_date)->get();
         $send_invoice = SendInvoiceModel::where('bill_month', $year_date)
-            ->where('status', null)
-            ->orWhere('status', 'DISCOUNTED')
+            ->where(function ($query){
+                $query->where('status', null)
+                    ->Orwhere('status', 'DISCOUNTED');
+            })
             ->orderBy('operator')
             ->get();
 //        $group_invoice = $this->sum_total_payments($send_invoice);
