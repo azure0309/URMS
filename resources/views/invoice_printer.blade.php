@@ -161,7 +161,7 @@
                                     </div>
                                     <div style="width: 100%; height: 50%; margin-top: 10%; page-break-before:always">
                                         <h3>Invoice For Roaming Test SIM detail:</h3>
-                                        <table border="1" class="table table-sm table-hover">
+                                        <table width="100%" border="1" class="table table-sm table-hover" style="margin-left: 5%; margin-right: 5%;">
                                             <tr>
                                                 <th>MSISDN</th>
                                                 <th>Bill month</th>

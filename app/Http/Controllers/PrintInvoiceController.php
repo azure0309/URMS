@@ -39,7 +39,7 @@ class PrintInvoiceController extends Controller
                     ->groupBy('country')
                     ->groupBy('operator')
                     ->sum('payment');
-                print_r($sum_amt);
+//                print_r($sum_amt);
             }
         }
         $year_date = $request->input('year_date');
