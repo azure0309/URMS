@@ -27,7 +27,7 @@
                         </form>
 
 
-                        <div id="export_section" style="margin-left: 5%; width: 15%; float: right">
+                        <div id="export_section" style="margin-left: 5%; width: 15%; float: right; display: none">
                             <button onclick="printDiv('lower_section')" style="width: 100%"
                                     class="btn btn-sm btn-success">Export PDF
                             </button>
@@ -129,6 +129,7 @@
                                         </td>
                                     </tr>
                                 @endforeach
+
                             </table>
                         </div>
                     </div>
