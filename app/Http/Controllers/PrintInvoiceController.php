@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\ClosePaymentModel;
 use App\PartnerInformationModel;
 use App\SendInvoiceModel;
+use App\CurrencyModel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -73,7 +74,8 @@ class PrintInvoiceController extends Controller
                 'current_month' => $currentMonth,
                 'partner_info' => $partner_info,
                 'sum_amount'=> $sum_amt,
-                'limit' => $limit
+                'limit' => $limit,
+                'payable_amt' => $sum_amt - $limit
             ]
         );
     }

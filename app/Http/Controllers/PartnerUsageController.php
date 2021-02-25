@@ -178,6 +178,8 @@ class PartnerUsageController extends Controller
                 $send_invoice->operator = $payment['operator'];
                 $send_invoice->msisdn = $payment['prod_no'];
                 $send_invoice->payment = $payment['payment'];
+                $send_invoice->currency = $currency[0];
+                $send_invoice->currency_amt = $get_currency[0];
                 $send_invoice->limit = $converted_limit;
                 if (empty($request)) {
                     $send_invoice->bill_month = $payment['bill_month'];

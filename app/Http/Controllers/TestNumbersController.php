@@ -28,17 +28,30 @@ class TestNumbersController extends Controller
         $all_usages = [];
         if(!empty($req_country) && empty($req_operator) && empty($req_number) && empty($req_month)){
             $numbers = $this->get_numbers_from_country($req_country);
-
             foreach ($numbers as $number){
                 $get_usages = SimUsageModel::where('prod_no', $number)->get();
-                array_push($all_usages, $get_usages);
+                foreach ($get_usages as $usage){
+                    array_push($all_usages, $usage);
+                }
             }
         }
         elseif (!empty($req_country) && !empty($req_operator) && empty($req_number) && empty($req_month)){
             $numbers = $this->get_numbers($req_country, $req_operator);
             foreach ($numbers as $number){
                 $get_usages = SimUsageModel::where('prod_no', $number)->get();
-                array_push($all_usages, $get_usages);
+                foreach ($get_usages as $usage){
+                    array_push($all_usages, $usage);
+                }
+            }
+        }
+        elseif (!empty($req_country) && !empty($req_operator) && empty($req_number) && !empty($req_month)){
+            $numbers = $this->get_numbers($req_country, $req_operator);
+            foreach ($numbers as $number){
+                $get_usages = SimUsageModel::where('prod_no', $number)
+                    ->where('bill_month', $req_month)->get();
+                foreach ($get_usages as $usage){
+                    array_push($all_usages, $usage);
+                }
             }
         }
         elseif (empty($req_country) && empty($req_operator) && empty($req_number) && !empty($req_month)){

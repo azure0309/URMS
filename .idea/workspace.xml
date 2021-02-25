@@ -5,7 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PrintInvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PrintInvoiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestNumbersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestNumbersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/invoice_printer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invoice_printer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,14 +202,8 @@
       <workItem from="1612944372463" duration="599000" />
       <workItem from="1613371552428" duration="1215000" />
       <workItem from="1613542998926" duration="1213000" />
-      <workItem from="1613925171407" duration="71458000" />
-    </task>
-    <task id="LOCAL-00005" summary="&quot;fixed bug initst, initend in Real Time Monitor&quot;">
-      <created>1564966722165</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1564966722165</updated>
+      <workItem from="1613925171407" duration="75107000" />
+      <workItem from="1614206958468" duration="2362000" />
     </task>
     <task id="LOCAL-00006" summary="&quot;fixed bug initst, initend in Real Time Monitor&quot;">
       <created>1566195276662</created>
@@ -545,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614155825672</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Print invoice, add partner info features are done&#10;&#10; commit#6.4">
+      <created>1614177203887</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1614177203888</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +570,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed edit, delete functions ReferenceController.php commit#1" />
     <MESSAGE value="modified Continents in reference.blade.php commit#2" />
     <MESSAGE value="changed Action button color on AlarmController.php commit#3" />
     <MESSAGE value="added SIM voice button main navigation bar menu on navbar.blade.php commit#4.0" />
@@ -592,7 +594,8 @@
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.1" />
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.2" />
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Print invoice, add partner info features are done&#10;&#10; commit#6.3" />
+    <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Print invoice, add partner info features are done&#10;&#10; commit#6.4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

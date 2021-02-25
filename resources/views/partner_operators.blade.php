@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="row mt-5">
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
                         <h3 style="text-align: center">Нийт төлбөрийн жагсаалт</h3>
@@ -80,7 +80,7 @@
                             @endforeach
                         </table>
                     </div>
-                    <div id='last_month' class="card-body">
+                    <div style="display: none" id='last_month' class="card-body">
                         <h3>Сүүлийн сарын бүх дугаарын хэрэглээ</h3>
                         <table class="table table-hover" border="1">
                             <tr>
