@@ -35,8 +35,8 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">
-    <p>&copy 2018 NSS team at Unitel. <br>
-        All Right Reserved. Version 1.1.0</p>
+    <p>&copy 2021 NSS team at Unitel. <br>
+        All Right Reserved. Version 4.3.0</p>
   </div>
   <!-- Copyright -->
 

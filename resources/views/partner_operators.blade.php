@@ -45,7 +45,8 @@
                     </form>
                     <button onclick="switcher()" class="form-control btn btn-sm btn-outline-info">Сүүлийн сарын хэрэглээ</button>
                     <div id="selected" class="card-body" >
-                        <table class="table table-hover" border="1">
+                        <table id="search" class="table table-hover" border="1">
+                            <thead>
                             <tr>
                                 <th>MSISDN</th>
                                 <th>Bill Month</th>
@@ -55,6 +56,8 @@
                                 <th>Unpaid Amount</th>
                                 <th>Status</th>
                             </tr>
+                            </thead>
+                            <tbody>
                             @foreach($usages as $info)
                                 @if ($info['status'] == 'UNCALCULATED')
                                     <tr bgcolor="#d9534f">
@@ -78,11 +81,13 @@
                                     </tr>
                                 @endif
                             @endforeach
+                            </tbody>
                         </table>
                     </div>
                     <div style="display: none" id='last_month' class="card-body">
                         <h3>Сүүлийн сарын бүх дугаарын хэрэглээ</h3>
-                        <table class="table table-hover" border="1">
+                        <table  class="table table-hover" border="1">
+                            <thead>
                             <tr>
                                 <th>MSISDN</th>
                                 <th>Bill Month</th>
@@ -92,6 +97,8 @@
                                 <th>Unpaid Amount</th>
                                 <th>Status</th>
                             </tr>
+                            </thead>
+                            <tbody>
                             @foreach($last_month as $info)
                                 @if ($info['status'] == 'UNCALCULATED')
                                     <tr bgcolor="#d9534f">
@@ -115,12 +122,37 @@
                                     </tr>
                                 @endif
                             @endforeach
+                            </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.colVis.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#search').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+        });
+    </script>
     <script>
         function switcher() {
             var x = document.getElementById("last_month");

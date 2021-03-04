@@ -16,17 +16,29 @@
                             <form action="/invoice/payment_case" method="get" >
                                 <div class="form-group">
                                     <label for="Country">Country</label>
-                                    <input type="text" class="form-control" name="country" placeholder="Mongolia">
+                                    <select class="form-control" name="note">
+                                        <option></option>
+                                        @foreach($country as $item)
+                                            <option>{{$item}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="Country">Operator</label>
-                                    <input type="text" class="form-control" name="operator" placeholder="Unitel">
+                                    <select class="form-control" name="note">
+                                        <option></option>
+                                        @foreach($operator as $item)
+                                            <option>{{$item}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="Product Type">Product Type</label>
-                                    <select class="form-control" name="prod_cd">
-                                        <option>Roaming Partner Test</option>
-                                        <option>Roaming Service Test</option>
+                                    <select class="form-control" name="note">
+                                        <option></option>
+                                        @foreach($prod_cd as $item)
+                                            <option>{{$item}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -35,14 +47,20 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Currency">Currency</label>
-                                    <input type="text" class="form-control" name="currency" placeholder="USD">
+                                    <select class="form-control" name="currency">
+                                        <option></option>
+                                        @foreach($currency as $item)
+                                        <option>{{$item['currency']}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="Note">Note</label>
                                     <select class="form-control" name="note">
-                                        <option>total SIM</option>
-                                        <option>per SIM</option>
-                                        <option>per PLMN</option>
+                                        <option></option>
+                                        @foreach($threshold_type as $item)
+                                        <option>{{$item}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">

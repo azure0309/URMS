@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\reference;
 use App\SimThresholdModel;
+use App\CurrencyModel;
 
 class PaymentCaseController extends Controller
 {
@@ -37,7 +39,19 @@ class PaymentCaseController extends Controller
 
     function add_page(Request $request)
     {
-        return view('payment_case_store');
+        $reference_country = reference::groupBy('country')->pluck('country');
+        $reference_operator = reference::groupBy('operator')->pluck('operator');
+        $currency = CurrencyModel::all();
+        $threshold_type = SimThresholdModel::groupBy('note')->pluck('note');
+        $prod_cd = SimThresholdModel::groupBy('prod_cd')->pluck('prod_cd');
+        return view('payment_case_store',
+            [
+                'prod_cd' => $prod_cd,
+                'country' => $reference_country,
+                'operator' => $reference_operator,
+                'currency' => $currency,
+                'threshold_type' => $threshold_type
+            ]);
     }
 
     function edit_page(Request $request)
@@ -45,11 +59,13 @@ class PaymentCaseController extends Controller
         $id = $request->input('id');
         $payment_case = SimThresholdModel::where('id', $id)->get();
         return view('payment_case_edit',
-        [
-            'payment_case'=>$payment_case
-        ]);
+            [
+                'payment_case' => $payment_case
+            ]);
     }
-    function edit(Request $request){
+
+    function edit(Request $request)
+    {
         $id = $request->input('id');
         $cust_urag = $request->input('cust_urag');
         $cust_name = $request->input('cust_name');

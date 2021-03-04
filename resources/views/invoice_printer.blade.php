@@ -131,9 +131,9 @@
                                         @endforeach
                                             <tr>
                                                 <td>{{$invoice['bill_month']}}</td>
-                                                <td>{{$sum_amount / $invoice['currency_amt'] . '$'}}</td>
+                                                <td>{{number_format($sum_amount / $invoice['currency_amt'],2) . '$'}}</td>
                                                 <td>{{$limit / $invoice['currency_amt'] . '$'}}</td>
-                                                <td>{{$payable_amt / $invoice['currency_amt'] . '$'}}</td>
+                                                <td>{{number_format($payable_amt / $invoice['currency_amt'],2) . '$'}}</td>
 
                                             </tr>
 
@@ -191,14 +191,14 @@
                                             <tr>
                                                 <td>{{$invoice['msisdn']}}</td>
                                                 <td>{{$invoice['bill_month']}}</td>
-                                                <td>{{$invoice['payment'] / $invoice['currency_amt'] . '$'}}</td>
+                                                <td>{{number_format($invoice['payment'] / $invoice['currency_amt'],2) . '$'}}</td>
                                             </tr>
                                         @endforeach
                                             <tr>
                                                 <td colspan="2"><span
                                                             style="font-weight: bold;">Total Charged Amount: </span>
                                                 </td>
-                                                <td>{{$sum_amount / $invoice['currency_amt'] . '$'}}</td>
+                                                <td>{{number_format($sum_amount / $invoice['currency_amt'],2) . '$'}}</td>
                                             </tr>
                                             <tr>
                                                 <td colspan="2"><span
@@ -208,7 +208,7 @@
                                             <tr>
                                                 <td colspan="2"><span
                                                             style="font-weight: bold">Total payable amount: </span></td>
-                                                <td>{{$payable_amt / $invoice['currency_amt'] . '$'}}</td>
+                                                <td>{{number_format($payable_amt / $invoice['currency_amt'], 2) . '$'}}</td>
                                             </tr>
 
                                     </table>

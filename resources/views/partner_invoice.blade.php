@@ -62,7 +62,7 @@
                                         <td>{{$payment['country']}}</td>
                                         <td>{{$payment['operator']}}</td>
                                         <td>{{$payment['msisdn']}}</td>
-                                        <td>{{floatval($payment['total'])}}</td>
+                                        <td>{{number_format(floatval($payment['total']))}}</td>
                                         <td>{{$payment['bill_month']}}</td>
                                     </tr>
                                 @endforeach
@@ -85,48 +85,44 @@
                                     <th>Country</th>
                                     <th>Operator</th>
                                     <th>MSISDN</th>
-                                    <th>Payment</th>
-                                    <th>NCMV</th>
+                                    <th>Payment /MNT/</th>
+                                    <th>NCMV /MNT/</th>
                                     <th>Bill month</th>
-                                    <th style="width: 15%">Discount</th>
                                     <th colspan="2" style="width: 25%">Action</th>
                                 </tr>
 
                                 @foreach($send_invoice as $payment)
                                     <tr>
-                                        <form method="GET" id="my_form"></form>
-                                        <td><input type="hidden" name="country" form="my_form"
-                                                   value="{{$payment['country']}}">{{$payment['country']}}</td>
-                                        <td><input type="hidden" name="operator" form="my_form"
-                                                   value="{{$payment['operator']}}">{{$payment['operator']}}</td>
-                                        <td><input type="hidden" name="msisdn" form="my_form"
-                                                   value="{{$payment['msisdn']}}">{{$payment['msisdn']}}</td>
-                                        <td><input type="hidden" name="total" form="my_form"
-                                                   value="{{$payment['payment']}}">{{$payment['payment']}}</td>
-                                        <td><input type="hidden" name="limit" form="my_form"
-                                                   value="{{$payment['limit']}}">{{$payment['limit']}}</td>
-                                        <td><input type="hidden" name="bill_month" form="my_form"
-                                                   value="{{$payment['bill_month']}}">{{$payment['bill_month']}}</td>
-                                        <td><input type="text" style="width: 92%" name="discount" form="my_form"
-                                                   placeholder="discount"></td>
-                                        <td>
 
-                                            <input type="submit" class="btn btn-sm btn-success" value="Confirm"
-                                                   name="action"
-                                                   form="my_form">
-                                        </td>
-                                        <td>
-{{--                                            <input formaction="/invoice/partner/print" type="submit"--}}
-{{--                                                   class="btn btn-sm btn-outline-danger" value="InvoicePDF"--}}
-{{--                                                   name="action"--}}
-{{--                                                   form="my_form">--}}
-                                            <a href="/invoice/partner/print?country={{$payment['country']}}
-                                                    &operator={{$payment['operator']}}
-                                                    &bill_month={{$payment['bill_month']}}
-                                                    &limit={{$payment['limit']}}
-                                                    &action=InvoicePDF
-&year_date={{$year_date}}"><button class="btn btn-sm btn-outline-danger">InvoicePDF</button></a>
-                                        </td>
+                                        <form action="partner" method="GET" id="my_form">
+                                            <input type="hidden" name="id" form="my_form"
+                                                   value="{{$payment['id']}}">
+                                            <input type="hidden" name="year_date" form="my_form"
+                                                   value="{{$year_date}}">
+                                            <td>{{$payment['country']}}</td>
+                                            <td>{{$payment['operator']}}</td>
+                                            <td>{{$payment['msisdn']}}</td>
+                                            <td>{{number_format($payment['payment']) . '₮'}}</td>
+                                            <td>{{number_format($payment['limit']) . '₮'}}</td>
+                                            <td>{{$payment['bill_month']}}</td>
+                                            <td>
+                                                <a href="/invoice/partner/action?id={{$payment['id']}}&year_date={{$year_date}}">
+                                                    <button class="btn btn-sm btn-success">Confirm</button>
+                                                </a>
+                                                {{--                                            <input type="submit" class="btn btn-sm btn-success" value="Confirm"--}}
+                                                {{--                                                   name="action"--}}
+                                                {{--                                                   form="my_form">--}}
+                                            </td>
+                                            <td>
+                                                {{--                                            <input formaction="/invoice/partner/print" type="submit"--}}
+                                                {{--                                                   class="btn btn-sm btn-outline-danger" value="InvoicePDF"--}}
+                                                {{--                                                   name="action"--}}
+                                                {{--                                                   form="my_form">--}}
+                                                <a href="/invoice/partner/print?country={{$payment['country']}}&operator={{$payment['operator']}}&bill_month={{$payment['bill_month']}}&limit={{$payment['limit']}}&action=InvoicePDF&year_date={{$year_date}}">
+                                                    <button class="btn btn-sm btn-outline-danger">InvoicePDF</button>
+                                                </a>
+                                            </td>
+                                        </form>
                                     </tr>
                                 @endforeach
 
@@ -159,8 +155,6 @@
             document.getElementById('higher_section').style.display = 'block';
             document.getElementById('export_section').style.display = 'none';
         }
-
-
 
 
     </script>

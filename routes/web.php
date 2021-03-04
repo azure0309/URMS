@@ -80,7 +80,10 @@ Route::get('/report/traffic_report', 'resultGraph@count_cdr');
 Route::get('/report/quality_report', 'quality_result@result_sig');
 Route::get('/report/datatable', 'datatableController@show');
 
+
 Route::get('/invoice/partner', 'PartnerUsageController@show');
+Route::get('/invoice/partner/action', 'PartnerActionController@show');
+Route::get('/invoice/partner/action/confirm', 'PartnerActionController@action');
 Route::get('/invoice/partner/print', 'PrintInvoiceController@show');
 Route::get('/invoice/service', 'ServiceUsageController@show');
 Route::get('/invoice/msisdn', 'TestNumbersController@show');
