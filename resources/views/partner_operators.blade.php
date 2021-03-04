@@ -45,9 +45,11 @@
                     </form>
                     <button onclick="switcher()" class="form-control btn btn-sm btn-outline-info">Сүүлийн сарын хэрэглээ</button>
                     <div id="selected" class="card-body" >
-                        <table id="search" class="table table-hover" border="1">
+                        <table id="search" class="table table-hover">
                             <thead>
                             <tr>
+                                <th>Country</th>
+                                <th>Operator</th>
                                 <th>MSISDN</th>
                                 <th>Bill Month</th>
                                 <th>Total Payment</th>
@@ -61,23 +63,27 @@
                             @foreach($usages as $info)
                                 @if ($info['status'] == 'UNCALCULATED')
                                     <tr bgcolor="#d9534f">
-                                        <td>{{$info['prod_no']}}</td>
-                                        <td>{{$info['bill_month']}}</td>
-                                        <td>{{$info['tot_bill_amt']}}</td>
-                                        <td>{{$info['over_pym']}}</td>
-                                        <td>{{$info['pym_amt']}}</td>
-                                        <td>{{$info['upaid_amt']}}</td>
-                                        <td>{{$info['bill_status']}}</td>
+                                        <td>{{$info['country'] }}</td>
+                                        <td>{{$info['name'] }}</td>
+                                        <td>{{$info['prod_no'] }}</td>
+                                        <td>{{$info['bill_month'] }}</td>
+                                        <td>{{$info['tot_bill_amt'] }}</td>
+                                        <td>{{$info['over_pym'] }}</td>
+                                        <td>{{$info['pym_amt'] }}</td>
+                                        <td>{{$info['upaid_amt'] }}</td>
+                                        <td>{{$info['bill_status'] }}</td>
                                     </tr>
                                 @else
                                     <tr>
-                                        <td>{{$info['prod_no']}}</td>
-                                        <td>{{$info['bill_month']}}</td>
-                                        <td>{{$info['tot_bill_amt']}}</td>
-                                        <td>{{$info['over_pym']}}</td>
-                                        <td>{{$info['pym_amt']}}</td>
-                                        <td>{{$info['upaid_amt']}}</td>
-                                        <td>{{$info['bill_status']}}</td>
+                                        <td>{{$info['country'] }}</td>
+                                        <td>{{$info['name'] }}</td>
+                                        <td>{{$info['prod_no'] }}</td>
+                                        <td>{{$info['bill_month'] }}</td>
+                                        <td>{{$info['tot_bill_amt'] }}</td>
+                                        <td>{{$info['over_pym'] }}</td>
+                                        <td>{{$info['pym_amt'] }}</td>
+                                        <td>{{$info['upaid_amt'] }}</td>
+                                        <td>{{$info['bill_status'] }}</td>
                                     </tr>
                                 @endif
                             @endforeach
@@ -102,23 +108,23 @@
                             @foreach($last_month as $info)
                                 @if ($info['status'] == 'UNCALCULATED')
                                     <tr bgcolor="#d9534f">
-                                        <td>{{$info['prod_no']}}</td>
-                                        <td>{{$info['bill_month']}}</td>
-                                        <td>{{$info['tot_bill_amt']}}</td>
-                                        <td>{{$info['over_pym']}}</td>
-                                        <td>{{$info['pym_amt']}}</td>
-                                        <td>{{$info['upaid_amt']}}</td>
-                                        <td>{{$info['bill_status']}}</td>
+                                        <td>{{$info->prod_no}}</td>
+                                        <td>{{$info->bill_month}}</td>
+                                        <td>{{$info->tot_bill_amt}}</td>
+                                        <td>{{$info->over_pym}}</td>
+                                        <td>{{$info->pym_amt}}</td>
+                                        <td>{{$info->upaid_amt}}</td>
+                                        <td>{{$info->bill_status}}</td>
                                     </tr>
                                 @else
                                     <tr>
-                                        <td>{{$info['prod_no']}}</td>
-                                        <td>{{$info['bill_month']}}</td>
-                                        <td>{{$info['tot_bill_amt']}}</td>
-                                        <td>{{$info['over_pym']}}</td>
-                                        <td>{{$info['pym_amt']}}</td>
-                                        <td>{{$info['upaid_amt']}}</td>
-                                        <td>{{$info['bill_status']}}</td>
+                                        <td>{{$info->prod_no}}</td>
+                                        <td>{{$info->bill_month}}</td>
+                                        <td>{{$info->tot_bill_amt}}</td>
+                                        <td>{{$info->over_pym}}</td>
+                                        <td>{{$info->pym_amt}}</td>
+                                        <td>{{$info->upaid_amt}}</td>
+                                        <td>{{$info->bill_status}}</td>
                                     </tr>
                                 @endif
                             @endforeach
