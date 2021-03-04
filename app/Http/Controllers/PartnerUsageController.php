@@ -168,6 +168,8 @@ class PartnerUsageController extends Controller
 
                 $limit = SimThresholdModel::where('cust_urag', $payment['country'])
                     ->where('cust_name', $payment['operator'])->pluck('ncmv');
+                $threshold_type = SimThresholdModel::where('cust_urag', $payment['country'])
+                    ->where('cust_name', $payment['operator'])->pluck('note');
                 $currency = SimThresholdModel::where('cust_urag', $payment['country'])
                     ->where('cust_name', $payment['operator'])->pluck('currency');
                 $get_currency = CurrencyModel::where('currency', $currency)->pluck('amount');
@@ -181,6 +183,7 @@ class PartnerUsageController extends Controller
                 $send_invoice->currency = $currency[0];
                 $send_invoice->currency_amt = $get_currency[0];
                 $send_invoice->limit = $converted_limit;
+                $send_invoice->note = $threshold_type[0];
                 if (empty($request)) {
                     $send_invoice->bill_month = $payment['bill_month'];
                 } else {

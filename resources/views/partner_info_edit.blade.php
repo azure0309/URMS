@@ -42,6 +42,7 @@
                                     <input type="text" class="form-control" name="pmn_code" value="{{$info['pmn_code']}}">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
+                                <a href="/invoice/partner_information" class="btn btn-secondary">Cancel</a>
                             </form>
                         @endforeach
                     </div>

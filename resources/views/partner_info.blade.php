@@ -12,13 +12,7 @@
                     </div>
 
                     <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
-                        <table id="partner" class="table table-hover table-sm display no-wrap">
+                        <table id="partner_contact" class="table table-hover table-sm display no-wrap">
                             <thead>
                             <tr>
                                 <th>Country</th>
@@ -68,14 +62,20 @@
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#partner').DataTable({
-                // dom: 'Bfrtip',
-                // buttons: [
-                //     'copy', 'csv', 'excel', 'pdf', 'print'
-                // ]
-            });
-        });
-    </script>
-@endsection
+{{--    <script type="text/javascript">--}}
+{{--        $(document).ready(function () {--}}
+{{--            $('#partner_contact').DataTable({--}}
+{{--                "dom": "<'row'<'col-sm-2'l><'col-sm-3'B><'col-sm-7'f>>" +--}}
+{{--                    "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-5'i><'col-sm-7'p>>",--}}
+{{--                buttons: [--}}
+{{--                    'copy', 'csv', 'excel', 'pdf', 'print'--}}
+{{--                ],--}}
+{{--                "columnDefs": [ {--}}
+{{--                    "targets": -1,--}}
+{{--                    "data": null,--}}
+{{--                    "defaultContent": "<a href='/invoice/partner_information/edit?id={{$info['id']}}'><button class='btn btn-sm btn-outline-warning'>Edit</button></a>"--}}
+{{--                    } ]--}}
+{{--                });--}}
+{{--            });--}}
+{{--        </script>--}}
+    @endsection

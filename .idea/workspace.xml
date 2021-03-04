@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner_info.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_info.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner_info_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_info_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,14 +206,7 @@
       <workItem from="1614206958468" duration="6332000" />
       <workItem from="1614343380366" duration="57000" />
       <workItem from="1614643335219" duration="5038000" />
-      <workItem from="1614737373553" duration="22410000" />
-    </task>
-    <task id="LOCAL-00009" summary="fixed initend 2019-08-30">
-      <created>1567127761394</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1567127761394</updated>
+      <workItem from="1614737373553" duration="32460000" />
     </task>
     <task id="LOCAL-00010" summary="fixed initend 2019-08-31">
       <created>1567233600490</created>
@@ -546,7 +544,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614821153985</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Bug fixed. amount number_format added. datatable added&#10;&#10; commit#7.0.1">
+      <created>1614821781016</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1614821781017</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +573,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="date bug real_time_monitor.blade.php commit#3.1" />
     <MESSAGE value="added feature that change color to green the 'Cleared' alarms on real_time_monitor.blade.php commit#4.0" />
     <MESSAGE value="added feature that change color to light the 'Warning' alarms on real_time_monitor.blade.php commit#4.1" />
     <MESSAGE value="date bug real_time_monitor.blade.php commit#4.2" />
@@ -593,7 +597,8 @@
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.5" />
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.6" />
     <MESSAGE value="Bug fixed. amount number_format added. datatable added&#10;&#10; commit#7.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixed. amount number_format added. datatable added&#10;&#10; commit#7.0" />
+    <MESSAGE value="Bug fixed. amount number_format added. datatable added&#10;&#10; commit#7.0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixed. amount number_format added. datatable added&#10;&#10; commit#7.0.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

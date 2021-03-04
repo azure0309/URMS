@@ -125,7 +125,7 @@
                     <a class="dropdown-item" href="{{url('#')}}">SIM Register -- Inbound SIM</a>
                     <h5 class="dropdown-header">Other</h5>
                     <a class="dropdown-item" href="{{url('invoice/msisdn')}}">Search Payments</a>
-                    <a class="dropdown-item" href="{{url('invoice/partner_information')}}">Partners Information</a>
+                    <a class="dropdown-item" href="{{url('invoice/partner_information')}}">Partner Contacts</a>
 {{--                    <a class="dropdown-item" href="{{url('invoice/service')}}">Roaming Service Test</a>--}}
                 </div>
             </li>
