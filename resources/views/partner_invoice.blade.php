@@ -106,8 +106,8 @@
                                             <td>{{$payment['country']}}</td>
                                             <td>{{$payment['operator']}}</td>
                                             <td>{{$payment['msisdn']}}</td>
-                                            <td>{{number_format($payment['payment']) . '₮'}}</td>
-                                            <td>{{number_format($payment['limit']) . '₮'}}</td>
+                                            <td>{{number_format($payment['payment']) . '₮' }}</td>
+                                            <td>{{number_format($payment['limit']) . '₮' . '  --  ' . $payment['ncmv'] . '$'}}</td>
                                             <td>{{$payment['note']}}</td>
                                             <td>{{$payment['bill_month']}}</td>
                                             <td>

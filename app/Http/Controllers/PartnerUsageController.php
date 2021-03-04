@@ -183,6 +183,7 @@ class PartnerUsageController extends Controller
                 $send_invoice->currency = $currency[0];
                 $send_invoice->currency_amt = $get_currency[0];
                 $send_invoice->limit = $converted_limit;
+                $send_invoice->ncmv = $limit[0];
                 $send_invoice->note = $threshold_type[0];
                 if (empty($request)) {
                     $send_invoice->bill_month = $payment['bill_month'];

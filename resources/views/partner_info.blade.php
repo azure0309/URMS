@@ -21,12 +21,13 @@
                                 <th>Phone</th>
                                 <th>Email</th>
                                 <th>PMN Code</th>
-                                <th colspan="2">Action</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($all_partner_info as $info)
                                 <tr>
+                                    <form method="GET" id="my_form" action="#"></form>
                                     <td>{{$info['country']}}</td>
                                     <td>{{$info['partner_name']}}</td>
                                     <td>{{$info['address']}}</td>
@@ -35,10 +36,12 @@
                                     <td>{{$info['pmn_code']}}</td>
                                     <td><a href="/invoice/partner_information/edit?id={{$info['id']}}">
                                             <button class="btn btn-sm btn-outline-warning">Edit</button>
-                                        </a></td>
-                                    <td><a href="/invoice/partner_information/delete?id={{$info['id']}}">
+                                        </a>
+                                        <a href="/invoice/partner_information/delete?id={{$info['id']}}">
                                             <button class="btn btn-sm btn-danger">Delete</button>
-                                        </a></td>
+                                        </a>
+                                    </td>
+
                                 </tr>
                             @endforeach
                             </tbody>
@@ -62,20 +65,15 @@
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-{{--    <script type="text/javascript">--}}
-{{--        $(document).ready(function () {--}}
-{{--            $('#partner_contact').DataTable({--}}
-{{--                "dom": "<'row'<'col-sm-2'l><'col-sm-3'B><'col-sm-7'f>>" +--}}
-{{--                    "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-5'i><'col-sm-7'p>>",--}}
-{{--                buttons: [--}}
-{{--                    'copy', 'csv', 'excel', 'pdf', 'print'--}}
-{{--                ],--}}
-{{--                "columnDefs": [ {--}}
-{{--                    "targets": -1,--}}
-{{--                    "data": null,--}}
-{{--                    "defaultContent": "<a href='/invoice/partner_information/edit?id={{$info['id']}}'><button class='btn btn-sm btn-outline-warning'>Edit</button></a>"--}}
-{{--                    } ]--}}
-{{--                });--}}
-{{--            });--}}
-{{--        </script>--}}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#partner_contact').DataTable({
+                // "dom": "<'row'<'col-sm-2'l><'col-sm-3'B><'col-sm-7'f>>" +
+                //     "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+                // buttons: [
+                //     'copy', 'csv', 'excel', 'pdf', 'print'
+                // ],
+                });
+            });
+        </script>
     @endsection

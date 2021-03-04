@@ -57,26 +57,31 @@ class PartnerActionController extends Controller
 
     function discount($id, $discount)
     {
-        $close_payment = new ClosePaymentModel();
         $to_discount = SendInvoiceModel::where('id', $id)->get();
 
 
         foreach ($to_discount as $item) {
-            $new_payment = $item['payment'] - $discount;
+            print_r($item['payment']);
+            echo $discount;
+            if ($discount >= $item['payment']){
+                echo "<script>alert('Discount утга үндсэн төлбөрөөс их байж болохгүй');</script>";
+            }else {
+                $new_payment = $item['payment'] - $discount;
 //            echo $item;
-            $id_info = SendInvoiceModel::find($id);
-            $id_info->payment = $new_payment;
-            $id_info->status = 'DISCOUNTED';
-            $id_info->save();
+                $id_info = SendInvoiceModel::find($id);
+                $id_info->payment = $new_payment;
+                $id_info->status = 'DISCOUNTED';
+                $id_info->save();
 
-            $close_payment = new ClosePaymentModel();
-            $close_payment->country = $item['country'];
-            $close_payment->operator = $item['operator'];
-            $close_payment->msisdn = $item['msisdn'];
-            $close_payment->total = $discount;
-            $close_payment->bill_month = $item['bill_month'];
-            $close_payment->status = 'DISCOUNTED';
-            $close_payment->save();
+                $close_payment = new ClosePaymentModel();
+                $close_payment->country = $item['country'];
+                $close_payment->operator = $item['operator'];
+                $close_payment->msisdn = $item['msisdn'];
+                $close_payment->total = $discount;
+                $close_payment->bill_month = $item['bill_month'];
+                $close_payment->status = 'DISCOUNTED';
+                $close_payment->save();
+            }
         }
 
     }
