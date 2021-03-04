@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/partner_invoice_action.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentCaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentCaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/invoice_printer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invoice_printer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partner_info.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_info.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/payment_case.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payment_case.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/payment_case_store.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payment_case_store.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/report.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/report.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,14 +201,7 @@
       <workItem from="1614206958468" duration="6332000" />
       <workItem from="1614343380366" duration="57000" />
       <workItem from="1614643335219" duration="5038000" />
-      <workItem from="1614737373553" duration="21693000" />
-    </task>
-    <task id="LOCAL-00008" summary="&quot;Donut chart position fixed&quot;">
-      <created>1566196591542</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1566196591542</updated>
+      <workItem from="1614737373553" duration="22410000" />
     </task>
     <task id="LOCAL-00009" summary="fixed initend 2019-08-30">
       <created>1567127761394</created>
@@ -559,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614218185213</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Bug fixed. amount number_format added. datatable added&#10;&#10; commit#7.0">
+      <created>1614821153984</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1614821153985</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +568,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added SIM voice button main navigation bar menu on navbar.blade.php commit#4.0" />
     <MESSAGE value="date bug real_time_monitor.blade.php commit#3.1" />
     <MESSAGE value="added feature that change color to green the 'Cleared' alarms on real_time_monitor.blade.php commit#4.0" />
     <MESSAGE value="added feature that change color to light the 'Warning' alarms on real_time_monitor.blade.php commit#4.1" />
@@ -606,7 +592,8 @@
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.4" />
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.5" />
     <MESSAGE value="Print invoice, add partner info features are done&#10;&#10; commit#6.6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Print invoice, add partner info features are done&#10;&#10; commit#6.6" />
+    <MESSAGE value="Bug fixed. amount number_format added. datatable added&#10;&#10; commit#7.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixed. amount number_format added. datatable added&#10;&#10; commit#7.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

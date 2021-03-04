@@ -62,7 +62,7 @@
                                         <td>{{$payment['country']}}</td>
                                         <td>{{$payment['operator']}}</td>
                                         <td>{{$payment['msisdn']}}</td>
-                                        <td>{{number_format(floatval($payment['total']))}}</td>
+                                        <td>{{number_format(floatval($payment['total'])) . '₮'}}</td>
                                         <td>{{$payment['bill_month']}}</td>
                                     </tr>
                                 @endforeach
