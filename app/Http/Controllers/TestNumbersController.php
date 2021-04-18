@@ -25,6 +25,7 @@ class TestNumbersController extends Controller
         $req_operator = $request->input('operator');
         $req_number = $request->input('bynumber');
         $req_month = $request->input('bymonth');
+        $req_status = $request->input('status');
         $all_usages = [];
         if(!empty($req_country) && empty($req_operator) && empty($req_number) && empty($req_month)){
             $numbers = $this->get_numbers_from_country($req_country);
@@ -57,9 +58,16 @@ class TestNumbersController extends Controller
         elseif (empty($req_country) && empty($req_operator) && empty($req_number) && !empty($req_month)){
             $all_usages = SimUsageModel::where('bill_month', $req_month)->get();
         }
+//        elseif (empty($req_country) && empty($req_operator) && empty($req_number) && empty($req_month)){
+//            $all_usages = SimUsageModel::all();
+//        }
         elseif (empty($req_country) && empty($req_operator) && !empty($req_number) && empty($req_month)){
             $all_usages = SimUsageModel::where('prod_no', $req_number)->get();
         }
+        elseif (empty($req_country) && empty($req_operator) && empty($req_number) && empty($req_month) && !empty($req_status)){
+            $all_usages = SimUsageModel::where('bill_status', strtoupper($req_status))->get();
+        }
+
 
         $select_country = SimInfoModel::where('country', '!=', 'SERVICE_PROVIDER')->pluck('country');
         $select_operator = SimInfoModel::pluck('name');

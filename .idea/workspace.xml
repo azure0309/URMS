@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestNumbersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestNumbersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,14 +205,13 @@
       <workItem from="1614343380366" duration="57000" />
       <workItem from="1614643335219" duration="5038000" />
       <workItem from="1614737373553" duration="35424000" />
-      <workItem from="1614851988478" duration="5209000" />
-    </task>
-    <task id="LOCAL-00012" summary="fixed initend 2019-09-01">
-      <created>1567269115958</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1567269115958</updated>
+      <workItem from="1614851988478" duration="5922000" />
+      <workItem from="1614907303616" duration="1803000" />
+      <workItem from="1618192366035" duration="105000" />
+      <workItem from="1618192587725" duration="247000" />
+      <workItem from="1618193447520" duration="2563000" />
+      <workItem from="1618782561799" duration="71000" />
+      <workItem from="1618782725317" duration="5186000" />
     </task>
     <task id="LOCAL-00013" summary="fixed initend 2019-09-30">
       <created>1569807004903</created>
@@ -548,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614837141050</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="added country, operator columns in search payments page&#10;&#10; commit#7.1.3">
+      <created>1614857302543</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1614857302544</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +578,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="date bug real_time_monitor.blade.php commit#4.2" />
     <MESSAGE value="invoice automation module added commit#5.1" />
     <MESSAGE value="invoice automation module added commit#5.2" />
     <MESSAGE value="invoice automation module added &#10;database config updated for 10.21.0.101 server commit#5.3" />
@@ -595,18 +602,8 @@
     <MESSAGE value="Bug fixed. amount number_format added. datatable added&#10;&#10; commit#7.0.1" />
     <MESSAGE value="invoice button can be rowspanned. &#10;added note column in invoice table. &#10;&#10; commit#7.1.1" />
     <MESSAGE value="invoice button can be rowspanned. &#10;added note column in invoice table. &#10;&#10; commit#7.1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="invoice button can be rowspanned. &#10;added note column in invoice table. &#10;&#10; commit#7.1.2" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php</url>
-          <line>162</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="added country, operator columns in search payments page&#10;&#10; commit#7.1.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="added country, operator columns in search payments page&#10;&#10; commit#7.1.3" />
   </component>
   <component name="masterDetails">
     <states>

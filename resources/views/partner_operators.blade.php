@@ -36,6 +36,22 @@
                                 <input class="form-control" name="bynumber" placeholder="88112233">
                             </div>
                             <div class="col">
+                                <label for="Number">Status</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="status" value="paid" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Paid
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="status" value="unpaid" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Unpaid
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col">
                                 <label for="Search">Хайх</label>
                                 <input class="form-control btn btn-sm btn-primary" type="submit" value="Search">
 
