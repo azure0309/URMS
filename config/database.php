@@ -80,8 +80,8 @@ return [
         'oracle' => [
             'driver'        => 'oracle',
             'tns'           => env('DB_TNS', '(DESCRIPTION =
-                                            (ADDRESS = (PROTOCOL = TCP)(HOST = 10.21.66.101)(PORT = 1521))
-                                            (ADDRESS = (PROTOCOL = TCP)(HOST = 10.21.66.102)(PORT = 1521))
+                                            (ADDRESS = (PROTOCOL = TCP)(HOST = 10.21.66.107)(PORT = 1521))
+                                            (ADDRESS = (PROTOCOL = TCP)(HOST = 10.21.66.107)(PORT = 1521))
 
                                             (LOAD_BALANCE = yes)
                                             (CONNECT_DATA =
