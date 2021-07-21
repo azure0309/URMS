@@ -27,13 +27,14 @@
                                     @endforeach
                                 </select>
                             </div>
+                            @foreach($usages as $item)@endforeach
                             <div class="col">
                                 <label for="Month">Сараар</label>
                                 <input class="form-control" name="bymonth" placeholder="202101">
                             </div>
                             <div class="col">
                                 <label for="Number">Дугаараар</label>
-                                <input class="form-control" name="bynumber" placeholder="88112233">
+                                <input class="form-control" name="bynumber" value='{{$item['prod_no']}}'>
                             </div>
                             <div class="col">
                                 <label for="Number">Status</label>
@@ -44,7 +45,7 @@
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="status" value="unpaid" id="flexRadioDefault2" checked>
+                                    <input class="form-check-input" type="radio" name="status" value="unpaid" id="flexRadioDefault2">
                                     <label class="form-check-label" for="flexRadioDefault2">
                                         Unpaid
                                     </label>

@@ -121,7 +121,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{url('invoice/partner')}}">Bill & Payment List</a>
                     <a class="dropdown-item" href="{{url('invoice/payment_case')}}">Payment Case</a>
-                    <a class="dropdown-item" href="{{url('#')}}">SIM Register -- Outbound SIM</a>
+                    <a class="dropdown-item" href="{{url('simregister/outbound')}}">SIM Register -- Outbound SIM</a>
                     <a class="dropdown-item" href="{{url('#')}}">SIM Register -- Inbound SIM</a>
                     <h5 class="dropdown-header">Other</h5>
                     <a class="dropdown-item" href="{{url('invoice/msisdn')}}">Search Payments</a>

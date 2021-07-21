@@ -97,6 +97,7 @@ Route::get('/invoice/partner_information/add/store', 'PartnerInformationControll
 Route::get('/invoice/partner_information/delete', 'PartnerInformationController@delete');
 Route::get('/invoice/partner_information/edit', 'PartnerInformationController@edit_show');
 Route::get('/invoice/partner_information/edit/done', 'PartnerInformationController@edit');
+Route::get('/simregister/outbound', 'SimRegistOutboundController@show');
 
 
 
