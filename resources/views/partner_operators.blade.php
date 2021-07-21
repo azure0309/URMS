@@ -34,7 +34,7 @@
                             </div>
                             <div class="col">
                                 <label for="Number">Дугаараар</label>
-                                <input class="form-control" name="bynumber" value='{{$item['prod_no']}}'>
+                                <input class="form-control" name="bynumber" value='89118432'>
                             </div>
                             <div class="col">
                                 <label for="Number">Status</label>
