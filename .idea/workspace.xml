@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/sim_outbound_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/sim_outbound_store.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/sim_inbound_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/sim_inbound_store.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/sim_regist_in.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerInformationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerInformationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SimRegistOutboundController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SimRegistOutboundController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner_info_store.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_info_store.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/sim_regist_out.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sim_regist_out.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -225,14 +230,7 @@
       <workItem from="1625800193085" duration="1960000" />
       <workItem from="1626764131486" duration="154000" />
       <workItem from="1626766137314" duration="6902000" />
-      <workItem from="1627228893299" duration="5746000" />
-    </task>
-    <task id="LOCAL-00018" summary="fixed initend 2019-12-31">
-      <created>1577755171035</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1577755171035</updated>
+      <workItem from="1627228893299" duration="14384000" />
     </task>
     <task id="LOCAL-00019" summary="fixed initend 2020-01-01">
       <created>1577808921920</created>
@@ -570,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626835074098</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Outbound sim registration done&#10;&#10; commit#8.1">
+      <created>1627243466198</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1627243466198</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +597,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="invoice automation module query builder error fixed commit#5.3" />
     <MESSAGE value="invoice automation module query builder error fixed commit#5.4" />
     <MESSAGE value="invoice automation module query builder error fixed commit#5.5" />
     <MESSAGE value="Module can classify whether payments are higher and lower. And select by date (202012)&#10;&#10; commit#5.6" />
@@ -617,7 +621,8 @@
     <MESSAGE value="In bill &amp; payment list section, added calculation of per sim numbers&#10;&#10;In search payments section, allowed to search by bill status&#10;&#10; commit#7.2" />
     <MESSAGE value="Updated oracle configure due to DWH version upgrade&#10;&#10; commit#7.3" />
     <MESSAGE value="Outbound sim registration show &#10;&#10; commit#8.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Outbound sim registration show &#10;&#10; commit#8.0" />
+    <MESSAGE value="Outbound sim registration done&#10;&#10; commit#8.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Outbound sim registration done&#10;&#10; commit#8.1" />
   </component>
   <component name="masterDetails">
     <states>

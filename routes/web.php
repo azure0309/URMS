@@ -104,5 +104,13 @@ Route::get('/simregister/outbound/edit/done', 'SimRegistOutboundController@edit'
 Route::get('/simregister/outbound/delete', 'SimRegistOutboundController@delete');
 Route::get('/simregister/outbound/add', 'SimRegistOutboundController@add_page');
 
+Route::get('/simregister/inbound', 'SimRegistInboundController@show');
+Route::get('/simregister/inbound/add', 'SimRegistInboundController@add_page');
+Route::get('/simregister/inbound/add/store', 'SimRegistInboundController@store');
+Route::get('/simregister/inbound/delete', 'SimRegistInboundController@delete');
+Route::get('/simregister/inbound/edit', 'SimRegistInboundController@edit_show');
+Route::get('/simregister/inbound/edit/done', 'SimRegistInboundController@edit');
+
+
 
 

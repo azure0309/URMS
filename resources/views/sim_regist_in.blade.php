@@ -2,50 +2,58 @@
 @section('content')
     <div class="container">
         <div class="row mt-5">
-            <div class="col-md-12">
+            <div>
                 <div class="card">
                     <div class="card-header">
-                        <h3 style="text-align: center; float: left">Sim Registration Outbound</h3>
-                        <a href="/simregister/outbound/add">
+                        <h3 style="text-align: center; float: left">Sim Registration Inbound</h3>
+                        <a href="/simregister/inbound/add">
                             <button style="float: right; width: 15%" class="btn btn-primary">Add</button>
                         </a>
                     </div>
 
                     <div class="card-body">
 
-                        <table border="1" id="example" class="table table-hover table-sm display no-wrap">
+                        <table border="1" id="example" class="table table-hover table-sm">
                             <thead>
                             <tr>
-                                <th>Prod NO</th>
-                                <th>Bill Accnt Number</th>
-                                <th>Customer Number</th>
-                                <th>Name</th>
+                                <th>Tadig</th>
+                                <th>Operator</th>
                                 <th>Country</th>
-                                <th>Prod Name</th>
-                                <th>Status</th>
-                                <th>Accnt BLNC</th>
-                                <th>SVC Type</th>
+                                <th>Agreement</th>
+                                <th>MSISDN</th>
+                                <th>IMSI</th>
+                                <th>ICC ID</th>
+                                <th>Pin 1</th>
+                                <th>Puk 1</th>
                                 <th>Type</th>
+                                <th>Post_pps</th>
+                                <th>Card Status</th>
+                                <th>Card Location</th>
+                                <th>Date</th>
                                 <th width="10%">Action</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($info as $item)
                                 <tr>
-                                    <td>{{$item['prod_no']}}</td>
-                                    <td>{{$item['bill_acnt_num']}}</td>
-                                    <td>{{$item['custrnm_num']}}</td>
-                                    <td>{{$item['name']}}</td>
+                                    <td>{{$item['tadig']}}</td>
+                                    <td>{{$item['operator']}}</td>
                                     <td>{{$item['country']}}</td>
-                                    <td>{{$item['prod_name']}}</td>
-                                    <td>{{$item['status']}}</td>
-                                    <td>{{$item['acnt_blnc']}}</td>
-                                    <td>{{$item['svc_type']}}</td>
+                                    <td>{{$item['agreement']}}</td>
+                                    <td>{{$item['msisdn']}}</td>
+                                    <td>{{$item['imsi']}}</td>
+                                    <td>{{$item['icc_id']}}</td>
+                                    <td>{{$item['pin_1']}}</td>
+                                    <td>{{$item['puk_1']}}</td>
                                     <td>{{$item['type']}}</td>
-                                    <td><a href="/simregister/outbound/edit?id={{$item['id']}}">
+                                    <td>{{$item['post_pps']}}</td>
+                                    <td>{{$item['card_status']}}</td>
+                                    <td>{{$item['card_location']}}</td>
+                                    <td>{{$item['dt']}}</td>
+                                    <td><a href="/simregister/inbound/edit?id={{$item['id']}}">
                                             <button class="btn btn-outline-warning btn-sm">Edit</button>
                                         </a>
-                                        <a href="/simregister/outbound/delete?id={{$item['id']}}">
+                                        <a href="/simregister/inbound/delete?id={{$item['id']}}">
                                             <button class="btn btn-outline-danger btn-sm">Delete</button>
                                         </a>
                                     </td>
@@ -77,7 +85,34 @@
             $('#example').DataTable({
                 dom: 'Bfrtip',
                 buttons: [
-                    'copy', 'csv', 'excel', 'pdf', 'print'
+                    'copy', 'csv', 'excel', 'pdf', 'colvis'
+                ],
+                "columnDefs": [
+                    {
+                        "targets": [ 8 ],
+                        "visible": false
+                    },
+                    {
+                        "targets": [ 9 ],
+                        "visible": false
+                    },
+                    {
+                        "targets": [ 10 ],
+                        "visible": false
+                    },
+{
+                        "targets": [ 11 ],
+                        "visible": false
+                    },
+{
+                        "targets": [ 12 ],
+                        "visible": false
+                    },
+{
+                        "targets": [ 13 ],
+                        "visible": false
+                    },
+
                 ]
             });
         });

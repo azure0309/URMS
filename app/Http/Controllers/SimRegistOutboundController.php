@@ -35,8 +35,7 @@ class SimRegistOutboundController extends Controller
         $svc_type = $request->input('svc_type');
         $type = $request->input('type');
 
-        if (!empty($prod_no && !empty($bill_acnt_num) && !empty($custrnm_num) && !empty($name) && !empty($country) && !empty($prod_name) && !empty($status)
-            && !empty($acnt_blnc) && !empty($svc_type) && !empty($type))) {
+        if (!empty($prod_no)) {
             $add_sim_outbound = new SimInfoModel();
             $add_sim_outbound->prod_no = $prod_no;
             $add_sim_outbound->bill_acnt_num = $bill_acnt_num;

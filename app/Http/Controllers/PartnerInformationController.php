@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\PartnerInformationModel;
 use App\PartnerInformationBackupModel;
+use App\reference;
 
 class PartnerInformationController extends Controller
 {
@@ -21,7 +22,10 @@ class PartnerInformationController extends Controller
 
     function add_page()
     {
-        return view('partner_info_store');
+        $country = reference::distinct()->pluck('country');
+        $operator = reference::distinct()->pluck('operator');
+        return view('partner_info_store',
+            ['country' => $country, 'operator' => $operator]);
     }
 
     function store(Request $request)

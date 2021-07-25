@@ -16,11 +16,21 @@
                         <form action="/invoice/partner_information/add/store" method="get">
                             <div class="form-group">
                                 <label for="Country">Country</label>
-                                <input type="text" class="form-control" name="country" placeholder="Mongolia">
+                                <select class="form-control" name="country">
+                                    <option selected></option>
+                                    @foreach($country as $item)
+                                        <option name="{{$item}}" value="{{$item}}">{{$item}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="Partner_name">Partner Name</label>
-                                <input type="text" class="form-control" name="partner_name" placeholder="Unitel">
+                                <select class="form-control" name="operator">
+                                    <option selected></option>
+                                    @foreach($operator as $item)
+                                        <option name="{{$item}}" value="{{$item}}">{{$item}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="Address">Address</label>
