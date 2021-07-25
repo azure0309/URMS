@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/sim_outbound_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/sim_outbound_store.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SimRegistOutboundController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SimRegistOutboundController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sim_regist_out.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sim_regist_out.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,14 +224,8 @@
       <workItem from="1625286655365" duration="2576000" />
       <workItem from="1625800193085" duration="1960000" />
       <workItem from="1626764131486" duration="154000" />
-      <workItem from="1626766137314" duration="2234000" />
-    </task>
-    <task id="LOCAL-00017" summary="fixed initend 2019-11-01">
-      <created>1572538537166</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1572538537166</updated>
+      <workItem from="1626766137314" duration="6902000" />
+      <workItem from="1627228893299" duration="5746000" />
     </task>
     <task id="LOCAL-00018" summary="fixed initend 2019-12-31">
       <created>1577755171035</created>
@@ -564,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626834928551</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Outbound sim registration show &#10;&#10; commit#8.0">
+      <created>1626835074098</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1626835074098</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

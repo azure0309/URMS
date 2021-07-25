@@ -98,6 +98,11 @@ Route::get('/invoice/partner_information/delete', 'PartnerInformationController@
 Route::get('/invoice/partner_information/edit', 'PartnerInformationController@edit_show');
 Route::get('/invoice/partner_information/edit/done', 'PartnerInformationController@edit');
 Route::get('/simregister/outbound', 'SimRegistOutboundController@show');
+Route::get('/simregister/outbound/add/store', 'SimRegistOutboundController@store');
+Route::get('/simregister/outbound/edit', 'SimRegistOutboundController@edit_show');
+Route::get('/simregister/outbound/edit/done', 'SimRegistOutboundController@edit');
+Route::get('/simregister/outbound/delete', 'SimRegistOutboundController@delete');
+Route::get('/simregister/outbound/add', 'SimRegistOutboundController@add_page');
 
 
 

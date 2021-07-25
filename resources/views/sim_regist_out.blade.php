@@ -4,12 +4,16 @@
         <div class="row mt-5">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Sim Registration Outbound</div>
+                    <div class="card-header">
+                        <h3 style="text-align: center; float: left">Sim Registration Outbound</h3>
+                        <a href="/simregister/outbound/add">
+                            <button style="float: right; width: 15%" class="btn btn-primary">Add</button>
+                        </a>
+                    </div>
 
                     <div class="card-body">
 
-                        <table border="1" id="example" class="table table-hover table-sm display no-wrap"
-                               cellspacing="0" width="100%">
+                        <table id="example" class="table table-hover table-sm display no-wrap">
                             <thead>
                             <tr>
                                 <th>Prod NO</th>
@@ -22,6 +26,7 @@
                                 <th>Accnt BLNC</th>
                                 <th>SVC Type</th>
                                 <th>Type</th>
+                                <th width="10%">Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -37,6 +42,13 @@
                                     <td>{{$item['acnt_blnc']}}</td>
                                     <td>{{$item['svc_type']}}</td>
                                     <td>{{$item['type']}}</td>
+                                    <td><a href="/simregister/outbound/edit?id={{$item['id']}}">
+                                            <button class="btn btn-outline-warning btn-sm">Edit</button>
+                                        </a>
+                                        <a href="/simregister/outbound/delete?id={{$item['id']}}">
+                                            <button class="btn btn-outline-danger btn-sm">Delete</button>
+                                        </a>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>
