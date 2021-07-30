@@ -17,23 +17,23 @@
                                     <input type="text" class="form-control" name="cust_urag" value="{{$info['cust_urag']}}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Partner Name</label>
+                                    <label for="exampleInputEmail1">Operator</label>
                                     <input type="text" class="form-control" name="cust_name" value="{{$info['cust_name']}}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Address</label>
+                                    <label for="exampleInputEmail1">Product Type</label>
                                     <input type="text" class="form-control" name="prod_cd" value="{{$info['prod_cd']}}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Phone</label>
+                                    <label for="exampleInputEmail1">NCMV</label>
                                     <input type="text" class="form-control" name="ncmv" value="{{$info['ncmv']}}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email</label>
+                                    <label for="exampleInputEmail1">Currency</label>
                                     <input type="text" class="form-control" name="currency" value="{{$info['currency']}}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">PMN Code</label>
+                                    <label for="exampleInputEmail1">Note</label>
                                     <input type="text" class="form-control" name="note" value="{{$info['note']}}">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
