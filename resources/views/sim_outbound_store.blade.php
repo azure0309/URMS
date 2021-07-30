@@ -28,11 +28,21 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" class="form-control" name="name">
+                                <select class="form-control" name="operator">
+                                    <option selected></option>
+                                    @foreach($operator as $item)
+                                        <option name="{{$item}}" value="{{$item}}">{{$item}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="country">Country</label>
-                                <input type="text" class="form-control" name="country">
+                                <select class="form-control" name="country">
+                                    <option selected></option>
+                                    @foreach($country as $item)
+                                        <option name="{{$item}}" value="{{$item}}">{{$item}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="prod_name">Prod Name</label>

@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="248c1663-2919-49f9-addf-baa85b0be079" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/sim_inbound_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/sim_inbound_store.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/sim_regist_in.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerInformationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerInformationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PartnerUsageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentCaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentCaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SimRegistInboundController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SimRegistInboundController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SimRegistOutboundController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SimRegistOutboundController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partner_info_store.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_info_store.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestNumbersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestNumbersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_invoice.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partner_operators.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sim_regist_out.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sim_regist_out.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sim_inbound_store.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sim_inbound_store.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sim_outbound_store.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sim_outbound_store.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,10 +77,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Let's make some meme\PhpstormProjects\URMS\public" />
+      <recent name="C:\Users\Let's make some meme\PhpstormProjects\URMS\public\python_files" />
       <recent name="C:\Users\Let's make some meme\PhpstormProjects\URMS\resources\img" />
       <recent name="C:\Users\Let's make some meme\PhpstormProjects\URMS\resources\views" />
       <recent name="C:\Users\User\PhpstormProjects\URMS\resources\views" />
-      <recent name="C:\Users\User\PhpstormProjects\URMS\resources" />
     </key>
   </component>
   <component name="RunManager">
@@ -230,14 +233,9 @@
       <workItem from="1625800193085" duration="1960000" />
       <workItem from="1626764131486" duration="154000" />
       <workItem from="1626766137314" duration="6902000" />
-      <workItem from="1627228893299" duration="14384000" />
-    </task>
-    <task id="LOCAL-00019" summary="fixed initend 2020-01-01">
-      <created>1577808921920</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1577808921920</updated>
+      <workItem from="1627228893299" duration="15512000" />
+      <workItem from="1627289090190" duration="6036000" />
+      <workItem from="1627367027837" duration="11920000" />
     </task>
     <task id="LOCAL-00020" summary="fixed initend 2020-01-01">
       <created>1580433700221</created>
@@ -575,7 +573,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627243466198</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Inbound sim registration done.&#10;Partner contact's store page gets countries and operators from reference&#10;&#10; commit#8.2">
+      <created>1627254029349</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1627254029349</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,7 +602,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="invoice automation module query builder error fixed commit#5.4" />
     <MESSAGE value="invoice automation module query builder error fixed commit#5.5" />
     <MESSAGE value="Module can classify whether payments are higher and lower. And select by date (202012)&#10;&#10; commit#5.6" />
     <MESSAGE value="Module can classify whether payments are higher and lower. And select by date (202012)&#10;&#10; commit#5.6.1" />
@@ -622,7 +626,8 @@
     <MESSAGE value="Updated oracle configure due to DWH version upgrade&#10;&#10; commit#7.3" />
     <MESSAGE value="Outbound sim registration show &#10;&#10; commit#8.0" />
     <MESSAGE value="Outbound sim registration done&#10;&#10; commit#8.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Outbound sim registration done&#10;&#10; commit#8.1" />
+    <MESSAGE value="Inbound sim registration done.&#10;Partner contact's store page gets countries and operators from reference&#10;&#10; commit#8.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inbound sim registration done.&#10;Partner contact's store page gets countries and operators from reference&#10;&#10; commit#8.2" />
   </component>
   <component name="masterDetails">
     <states>

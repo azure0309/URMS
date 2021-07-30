@@ -58,13 +58,23 @@
                                     <th>Bill month</th>
                                 </tr>
                                 @foreach($close_payment as $payment)
-                                    <tr>
-                                        <td>{{$payment['country']}}</td>
-                                        <td>{{$payment['operator']}}</td>
-                                        <td>{{$payment['msisdn']}}</td>
-                                        <td>{{number_format(floatval($payment['total'])) . '₮'}}</td>
-                                        <td>{{$payment['bill_month']}}</td>
-                                    </tr>
+                                    @if($payment['iscalculated'] == 'UNCALCULATED')
+                                        <tr bgcolor="#d9534f">
+                                            <td>{{$payment['country']}}</td>
+                                            <td>{{$payment['operator']}}</td>
+                                            <td>{{$payment['msisdn']}}</td>
+                                            <td>{{number_format(floatval($payment['total'])) . '₮'}}</td>
+                                            <td>{{$payment['bill_month']}}</td>
+                                        </tr>
+                                    @else
+                                        <tr>
+                                            <td>{{$payment['country']}}</td>
+                                            <td>{{$payment['operator']}}</td>
+                                            <td>{{$payment['msisdn']}}</td>
+                                            <td>{{number_format(floatval($payment['total'])) . '₮'}}</td>
+                                            <td>{{$payment['bill_month']}}</td>
+                                        </tr>
+                                    @endif
                                 @endforeach
                             </table>
                         </div>
@@ -95,8 +105,8 @@
                                 @php ($renderedElections = []) @endphp
                                 @php ($renderedAreas = []) @endphp
                                 @foreach($send_invoice as $payment)
-
-                                    <tr>
+                                    @if(@$payment['iscalculated'] == 'UNCALCULATED')
+                                    <tr bgcolor="#d9534f">
 
                                         <form action="partner" method="GET" id="my_form">
                                             <input type="hidden" name="id" form="my_form"
@@ -119,7 +129,7 @@
                                             @if(!in_array($payment['country'] . '_' . $payment['operator'], $renderedAreas))
                                                 <td rowspan="{{count($send_invoice->where('country', $payment['country']))}}">
                                                     <a href="/invoice/partner/print?country={{$payment['country']}}&operator={{$payment['operator']}}&bill_month={{$payment['bill_month']}}&limit={{$payment['limit']}}&action=InvoicePDF&year_date={{$year_date}}">
-                                                        <button class="btn btn-sm btn-outline-danger">InvoicePDF
+                                                        <button class="btn btn-sm btn-primary">InvoicePDF
                                                         </button>
                                                     </a>
                                                 </td>
@@ -136,6 +146,48 @@
 
                                         </form>
                                     </tr>
+                                    @else
+                                        <tr>
+
+                                            <form action="partner" method="GET" id="my_form">
+                                                <input type="hidden" name="id" form="my_form"
+                                                       value="{{$payment['id']}}">
+                                                <input type="hidden" name="year_date" form="my_form"
+                                                       value="{{$year_date}}">
+                                                <td>{{$payment['country']}}</td>
+                                                <td>{{$payment['operator']}}</td>
+                                                <td>{{$payment['msisdn']}}</td>
+                                                <td>{{number_format($payment['payment']) . '₮' }}</td>
+                                                <td>{{number_format($payment['limit']) . '₮' . '  --  ' . $payment['ncmv'] . '$'}}</td>
+                                                <td>{{$payment['note']}}</td>
+                                                <td>{{$payment['bill_month']}}</td>
+                                                <td>
+                                                    <a href="/invoice/partner/action?id={{$payment['id']}}&year_date={{$year_date}}">
+                                                        <button class="btn btn-sm btn-success">Confirm</button>
+                                                    </a>
+                                                </td>
+
+                                                @if(!in_array($payment['country'] . '_' . $payment['operator'], $renderedAreas))
+                                                    <td rowspan="{{count($send_invoice->where('country', $payment['country']))}}">
+                                                        <a href="/invoice/partner/print?country={{$payment['country']}}&operator={{$payment['operator']}}&bill_month={{$payment['bill_month']}}&limit={{$payment['limit']}}&action=InvoicePDF&year_date={{$year_date}}">
+                                                            <button class="btn btn-sm btn-outline-danger">InvoicePDF
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                    <?php array_push($renderedAreas, $payment['country'] . '_' . $payment['operator']) ?>
+
+                                                    {{--                                            @elseif(in_array($payment['country'] . '_' . $payment['operator'], $renderedAreas))--}}
+                                                    {{--                                                <td>--}}
+                                                    {{--                                                    <a href="/invoice/partner/print?country={{$payment['country']}}&operator={{$payment['operator']}}&bill_month={{$payment['bill_month']}}&limit={{$payment['limit']}}&action=InvoicePDF&year_date={{$year_date}}">--}}
+                                                    {{--                                                        <button class="btn btn-sm btn-outline-danger">InvoicePDF--}}
+                                                    {{--                                                        </button>--}}
+                                                    {{--                                                    </a>--}}
+                                                    {{--                                                </td>--}}
+                                                @endif
+
+                                            </form>
+                                        </tr>
+                                    @endif
                                 @endforeach
                             </table>
                         </div>

@@ -76,8 +76,10 @@ class PartnerUsageController extends Controller
     {
         $total_sim = array();
         $per_sim = array();
+        $uncalculated = array();
         $total_sim_payment = array();
         $per_sim_payment = array();
+        $uncalculated_sim_payment = array();
 
         $get_last_month_numbers = $this->get_month_numbers($request);
         foreach ($get_last_month_numbers as $item) {
@@ -88,6 +90,8 @@ class PartnerUsageController extends Controller
                 } elseif (strtoupper($threshold_of_number[0]) == 'PER SIM') {
                     array_push($per_sim, $item);
                 }
+            }else{
+                array_push($uncalculated, $item);
             }
         }
         foreach ($total_sim as $sim) {
@@ -110,7 +114,19 @@ class PartnerUsageController extends Controller
             array_push($per_sim_payment, ['country' => $country[0], 'operator' => $operator[0], 'prod_no' => $sim, 'payment' => $payment_of_number, 'bill_month' => $currentMonth]);
 //            array_push($per_sim_payment, ['country' => $country[0], 'operator' => $operator[0], 'prod_no' => $sim, 'payment' => $payment_of_number, 'bill_month' => $currentMonth]);
         }
-        return ['total_sim_payment' => $total_sim_payment, 'per_sim_payment' => $per_sim_payment];
+        foreach ($uncalculated as $sim) {
+//            $operator = SimInfoModel::where('prod_no', $sim)->pluck('name');
+            $payment_of_number = $this->get_payment_of_number($sim, $request);
+
+            $currentMonth = intval(date('Ym', strtotime("-1 month")));
+            $operator = SimInfoModel::where('prod_no', $sim)->pluck('name');
+            $country = SimInfoModel::where('prod_no', $sim)->pluck('country');
+//            $payment_of_number = $this->get_payment_of_number($sim, $request);
+
+            array_push($uncalculated_sim_payment, ['country' => $country[0], 'operator' => $operator[0], 'prod_no' => $sim, 'payment' => $payment_of_number, 'bill_month' => $currentMonth]);
+//            array_push($per_sim_payment, ['country' => $country[0], 'operator' => $operator[0], 'prod_no' => $sim, 'payment' => $payment_of_number, 'bill_month' => $currentMonth]);
+        }
+        return ['total_sim_payment' => $total_sim_payment, 'per_sim_payment' => $per_sim_payment, 'uncalculated_sim_payment' => $uncalculated_sim_payment];
     }
 
     function sum_total_payments($total_numbers_list)
@@ -170,6 +186,8 @@ class PartnerUsageController extends Controller
 //        print_r($total_sim_payments);
         $per_sim_payments = $list['per_sim_payment'];
 //        print_r($per_sim_payments);
+        $uncalculated_sim_payment = $list['uncalculated_sim_payment'];
+//        print_r($uncalculated_sim_payment);
 
         foreach($per_sim_payments as $payment){
             $limit = SimThresholdModel::where('cust_urag', $payment['country'])
@@ -222,6 +240,83 @@ class PartnerUsageController extends Controller
                 $close_payment->operator = $payment['operator'];
                 $close_payment->msisdn = $payment['prod_no'];
                 $close_payment->total = $payment['payment'];
+                if (empty($request)) {
+                    $close_payment->bill_month = $payment['bill_month'];
+                } else {
+                    $close_payment->bill_month = $request;
+                }
+
+                $select = ClosePaymentModel::where('country', $payment['country'])
+                    ->where('operator', $payment['operator'])
+                    ->where('msisdn', $payment['prod_no'])
+//                ->where('total', $payment['payment'])
+                    ->where('bill_month', $request)
+//                    ->where('currency', $currency[0])
+                    ->count();
+//            print_r($select);
+
+//                echo $close_payment->country . ' ';
+//                echo $close_payment->operator . ' ';
+//                echo $close_payment->msisdn . ' ';
+//                echo $close_payment->total;
+//                echo $close_payment->bill_month . ' ';
+//                echo $close_payment->currency . ' ';
+                if ($select == 0) {
+                    $close_payment->save();
+                }
+            }
+        }
+
+        foreach($uncalculated_sim_payment as $payment){
+            $default_limit = 20;
+            $threshold_type = 'Not in Payment Case';
+            $currency = 'USD';
+            $get_currency = CurrencyModel::where('currency', $currency)->pluck('amount');
+            $converted_limit = $default_limit * $get_currency[0];
+
+//            echo $payment['payment'];
+            if ($payment['payment'] >= $converted_limit){
+                $send_invoice = new SendInvoiceModel();
+                $send_invoice->country = $payment['country'];
+                $send_invoice->operator = $payment['operator'];
+                $send_invoice->msisdn = $payment['prod_no'];
+                $send_invoice->payment = $payment['payment'];
+                $send_invoice->currency = 'USD';
+                $send_invoice->currency_amt = $get_currency[0];
+                $send_invoice->limit = $converted_limit;
+                $send_invoice->ncmv = $default_limit;
+                $send_invoice->note = $threshold_type;
+                $send_invoice->iscalculated = 'UNCALCULATED';
+                if (empty($request)) {
+                    $send_invoice->bill_month = $payment['bill_month'];
+                } else {
+                    $send_invoice->bill_month = $request;
+                }
+                $send_invoice->bill_month = $request;
+
+//                echo $send_invoice->country . ' ';
+//                echo $send_invoice->operator . ' ';
+//                echo $send_invoice->msisdn . ' ';
+//                echo $send_invoice->total . ' ';
+//                echo $send_invoice->bill_month . ' ';
+//                echo $send_invoice->currency . ' ';
+
+                $select_invoice = SendInvoiceModel::where('country', $payment['country'])
+                    ->where('operator', $payment['operator'])
+                    ->where('msisdn', $payment['prod_no'])
+                    ->where('bill_month', $request)
+                    ->count();
+//                echo $select_invoice;
+                if ($select_invoice == 0) {
+                    $send_invoice->save();
+                }
+            }else{
+                $close_payment = new ClosePaymentModel();
+                $close_payment->country = $payment['country'];
+                $close_payment->operator = $payment['operator'];
+                $close_payment->msisdn = $payment['prod_no'];
+                $close_payment->total = $payment['payment'];
+                $close_payment->iscalculated = 'UNCALCULATED';
                 if (empty($request)) {
                     $close_payment->bill_month = $payment['bill_month'];
                 } else {

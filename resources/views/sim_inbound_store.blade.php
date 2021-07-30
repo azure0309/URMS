@@ -19,12 +19,22 @@
                                 <input type="text" class="form-control" name="tadig">
                             </div>
                             <div class="form-group">
-                                <label for="Bill Acnt Num">Operator</label>
-                                <input type="text" class="form-control" name="operator">
+                                <label for="Country">Country</label>
+                                <select class="form-control" name="operator">
+                                    <option selected></option>
+                                    @foreach($operator as $item)
+                                        <option name="{{$item}}" value="{{$item}}">{{$item}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="custrnm_num">Country</label>
-                                <input type="text" class="form-control" name="country">
+                                <label for="Country">Country</label>
+                                <select class="form-control" name="country">
+                                    <option selected></option>
+                                    @foreach($country as $item)
+                                        <option name="{{$item}}" value="{{$item}}">{{$item}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="name">Agreement</label>

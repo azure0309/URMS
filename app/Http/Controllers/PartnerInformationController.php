@@ -22,8 +22,8 @@ class PartnerInformationController extends Controller
 
     function add_page()
     {
-        $country = reference::distinct()->pluck('country');
-        $operator = reference::distinct()->pluck('operator');
+        $country = reference::distinct()->orderBy('country')->pluck('country');
+        $operator = reference::distinct()->orderBy('operator')->pluck('operator');
         return view('partner_info_store',
             ['country' => $country, 'operator' => $operator]);
     }

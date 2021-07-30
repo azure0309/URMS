@@ -112,5 +112,8 @@ Route::get('/simregister/inbound/edit', 'SimRegistInboundController@edit_show');
 Route::get('/simregister/inbound/edit/done', 'SimRegistInboundController@edit');
 
 
+Route::get('/invoice/datasource', 'Invoice_Data_source@data_source');
+
+
 
 

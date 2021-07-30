@@ -39,8 +39,8 @@ class PaymentCaseController extends Controller
 
     function add_page(Request $request)
     {
-        $reference_country = reference::groupBy('country')->pluck('country');
-        $reference_operator = reference::groupBy('operator')->pluck('operator');
+        $reference_country = reference::distinct()->orderBy('country')->pluck('country');
+        $reference_operator = reference::distinct()->orderBy('operator')->pluck('operator');
         $currency = CurrencyModel::all();
         $threshold_type = SimThresholdModel::groupBy('note')->pluck('note');
         $prod_cd = SimThresholdModel::groupBy('prod_cd')->pluck('prod_cd');

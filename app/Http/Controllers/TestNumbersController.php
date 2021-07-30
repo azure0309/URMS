@@ -26,6 +26,7 @@ class TestNumbersController extends Controller
         $req_number = $request->input('bynumber');
         $req_month = $request->input('bymonth');
         $req_status = $request->input('status');
+        echo $req_status;
         $all_usages = [];
         if(!empty($req_country) && empty($req_operator) && empty($req_number) && empty($req_month)){
             $numbers = $this->get_numbers_from_country($req_country);
@@ -65,12 +66,17 @@ class TestNumbersController extends Controller
             $all_usages = SimUsageModel::where('prod_no', $req_number)->get();
         }
         elseif (empty($req_country) && empty($req_operator) && empty($req_number) && empty($req_month) && !empty($req_status)){
-            $all_usages = SimUsageModel::where('bill_status', strtoupper($req_status))->get();
+            if ($req_status == 'uncalculated'){
+                $all_usages = SimUsageModel::where('status', strtoupper($req_status))->get();
+            }else{
+                $all_usages = SimUsageModel::where('bill_status', strtoupper($req_status))->get();
+            }
         }
 
 
-        $select_country = SimInfoModel::where('country', '!=', 'SERVICE_PROVIDER')->pluck('country');
-        $select_operator = SimInfoModel::pluck('name');
+
+        $select_country = SimInfoModel::distinct()->where('country', '!=', 'SERVICE_PROVIDER')->orderBy('country')->pluck('country');
+        $select_operator = SimInfoModel::distinct()->orderBy('name')->pluck('name');
 
         $currentMonth = intval(date('Ym', strtotime("-1 month")));
 

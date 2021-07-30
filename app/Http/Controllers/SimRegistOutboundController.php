@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\reference;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\SimInfoModel;
@@ -19,7 +20,9 @@ class SimRegistOutboundController extends Controller
 
     function add_page()
     {
-        return view('sim_outbound_store');
+        $reference_country = reference::distinct()->orderBy('country')->pluck('country');
+        $reference_operator = reference::distinct()->orderBy('operator')->pluck('operator');
+        return view('sim_outbound_store', ['country'=>$reference_country, 'operator'=>$reference_operator]);
     }
 
     function store(Request $request)
