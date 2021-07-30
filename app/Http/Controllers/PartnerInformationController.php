@@ -31,14 +31,21 @@ class PartnerInformationController extends Controller
     function store(Request $request)
     {
         $country = $request->input('country');
-        $partner_name = $request->input('partner_name');
+        $partner_name = $request->input('operator');
         $address = $request->input('address');
         $phone = $request->input('phone');
         $email = $request->input('email');
         $pmn_code = $request->input('pmn_code');
 
+//        echo $country;
+//        echo $partner_name;
+//        echo $address;
+//        echo $phone;
+//        echo $email;
+//        echo $pmn_code;
+
         if (!empty($country) && !empty($partner_name) && !empty($address) && !empty($phone) && !empty($email) && !empty($pmn_code)) {
-            $add_partner_info = new PartnerInformationModel;
+            $add_partner_info = new PartnerInformationModel();
             $add_partner_info->country = strtoupper($country);
             $add_partner_info->partner_name = strtoupper($partner_name);
             $add_partner_info->address = $address;
@@ -46,6 +53,7 @@ class PartnerInformationController extends Controller
             $add_partner_info->email = $email;
             $add_partner_info->pmn_code = $pmn_code;
             $add_partner_info->save();
+//            echo 'test1';
         }
         return redirect('/invoice/partner_information');
     }
