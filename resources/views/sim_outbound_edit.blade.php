@@ -16,44 +16,48 @@
                         <form action="/simregister/outbound/edit/done" method="get">
                             <input type="hidden" class="form-control" name="id" value="{{$item['id']}}">
                             <div class="form-group">
-                                <label for="Prod_no">Prod_no</label>
-                                <input type="text" class="form-control" name="prod_no" value="{{$item['prod_no']}}">
+                                <label for="Prod_no">Tadig</label>
+                                <input type="text" class="form-control" name="tadig" value="{{$item['tadig']}}">
                             </div>
                             <div class="form-group">
-                                <label for="Bill Acnt Num">Bill Acnt Num</label>
-                                <input type="text" class="form-control" name="bill_acnt_num" value="{{$item['bill_acnt_num']}}">
+                                <label for="Bill Acnt Num">Operator</label>
+                                <input type="text" class="form-control" name="operator" value="{{$item['operator']}}">
                             </div>
                             <div class="form-group">
-                                <label for="custrnm_num">Custrnm Num</label>
-                                <input type="text" class="form-control" name="custrnm_num" value="{{$item['custrnm_num']}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control" name="name" value="{{$item['name']}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="country">Country</label>
+                                <label for="custrnm_num">Country</label>
                                 <input type="text" class="form-control" name="country" value="{{$item['country']}}">
                             </div>
                             <div class="form-group">
-                                <label for="prod_name">Prod Name</label>
-                                <input type="text" class="form-control" name="prod_name" value="{{$item['prod_name']}}">
+                                <label for="country">MSISDN</label>
+                                <input type="text" class="form-control" name="msisdn" value="{{$item['msisdn']}}">
                             </div>
                             <div class="form-group">
-                                <label for="status">Status</label>
-                                <input type="text" class="form-control" name="status" value="{{$item['status']}}">
+                                <label for="prod_name">IMSI</label>
+                                <input type="text" class="form-control" name="imsi" value="{{$item['imsi']}}">
                             </div>
                             <div class="form-group">
-                                <label for="acnt_blnc">Acnt Blnc</label>
-                                <input type="text" class="form-control" name="acnt_blnc" value="{{$item['acnt_blnc']}}">
+                                <label for="status">ICC ID</label>
+                                <input type="text" class="form-control" name="icc_id" value="{{$item['icc_id']}}">
                             </div>
                             <div class="form-group">
-                                <label for="svc_typec">Svc type</label>
-                                <input type="text" class="form-control" name="svc_type" value="{{$item['svc_type']}}">
+                                <label for="acnt_blnc">Pin 1</label>
+                                <input type="text" class="form-control" name="pin_1" value="{{$item['pin_1']}}">
                             </div>
                             <div class="form-group">
-                                <label for="type">Type</label>
-                                <input type="text" class="form-control" name="type" value="{{$item['type']}}">
+                                <label for="svc_typec">Puk 1</label>
+                                <input type="text" class="form-control" name="puk_1" value="{{$item['puk_1']}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Card Status</label>
+                                <input type="text" class="form-control" name="card_status" value="{{$item['card_status']}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Card Location</label>
+                                <input type="text" class="form-control" name="card_location" value="{{$item['card_location']}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Date</label>
+                                <input type="text" class="form-control" name="dt" value="{{$item['dt']}}">
                             </div>
 
                             <div class="form-group">

@@ -40,9 +40,9 @@ class PartnerUsageController extends Controller
         $select = SimUsageModel::where('bill_month', $currentMonth)->pluck('prod_no');
         foreach ($select as $item) {
             $get_prod_name = $this->get_prod_name($item);
-            if (strtoupper($get_prod_name) == 'ROAMING PARTNER TEST') {
+//            if (strtoupper($get_prod_name) == 'ROAMING PARTNER TEST') {
                 array_push($numbers, $item);
-            }
+//            }
         }
         return $numbers;
     }
@@ -619,7 +619,12 @@ class PartnerUsageController extends Controller
             }
         }
         $year_date = $request->input('year_date');
-        $currentMonth = intval(date('Ym', strtotime("-1 month")));
+
+        if(date('d') < 10){
+            $currentMonth = intval(date('Ym', strtotime("-2 month")));
+        }else{
+            $currentMonth = intval(date('Ym', strtotime("-1 month")));
+        }
 
         if (empty($year_date)) {
             $year_date = $currentMonth;

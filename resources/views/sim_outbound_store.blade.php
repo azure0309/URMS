@@ -15,28 +15,11 @@
 
                         <form action="/simregister/outbound/add/store" method="get">
                             <div class="form-group">
-                                <label for="Prod_no">Prod_no</label>
-                                <input type="text" class="form-control" name="prod_no" placeholder="88112233">
+                                <label for="Prod_no">Tadig</label>
+                                <input type="text" class="form-control" name="tadig">
                             </div>
                             <div class="form-group">
-                                <label for="Bill Acnt Num">Bill Acnt Num</label>
-                                <input type="text" class="form-control" name="bill_acnt_num">
-                            </div>
-                            <div class="form-group">
-                                <label for="custrnm_num">Custrnm Num</label>
-                                <input type="text" class="form-control" name="custrnm_num">
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <select class="form-control" name="operator">
-                                    <option selected></option>
-                                    @foreach($operator as $item)
-                                        <option name="{{$item}}" value="{{$item}}">{{$item}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="country">Country</label>
+                                <label for="Country">Country</label>
                                 <select class="form-control" name="country">
                                     <option selected></option>
                                     @foreach($country as $item)
@@ -45,24 +28,45 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="prod_name">Prod Name</label>
-                                <input type="text" class="form-control" name="prod_name">
+                                <label for="Country">Country</label>
+                                <select class="form-control" name="operator">
+                                    <option selected></option>
+                                    @foreach($operator as $item)
+                                        <option name="{{$item}}" value="{{$item}}">{{$item}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="status">Status</label>
-                                <input type="text" class="form-control" name="status">
+                                <label for="country">MSISDN</label>
+                                <input type="text" class="form-control" name="msisdn">
                             </div>
                             <div class="form-group">
-                                <label for="acnt_blnc">Acnt Blnc</label>
-                                <input type="text" class="form-control" name="acnt_blnc">
+                                <label for="prod_name">IMSI</label>
+                                <input type="text" class="form-control" name="imsi">
                             </div>
                             <div class="form-group">
-                                <label for="svc_typec">Svc type</label>
-                                <input type="text" class="form-control" name="svc_type">
+                                <label for="status">ICC ID</label>
+                                <input type="text" class="form-control" name="icc_id">
                             </div>
                             <div class="form-group">
-                                <label for="type">Type</label>
-                                <input type="text" class="form-control" name="type">
+                                <label for="acnt_blnc">Pin 1</label>
+                                <input type="text" class="form-control" name="pin_1">
+                            </div>
+                            <div class="form-group">
+                                <label for="svc_typec">Puk 1</label>
+                                <input type="text" class="form-control" name="puk_1">
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Card Status</label>
+                                <input type="text" class="form-control" name="card_status">
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Card Location</label>
+                                <input type="text" class="form-control" name="card_location">
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Date</label>
+                                <input type="text" class="form-control" name="dt">
                             </div>
 
                             <div class="form-group">
